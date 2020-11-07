@@ -1,5 +1,12 @@
 <template>
     <div>
+
+        <div id="header-icon-container">
+            <div id="header-icon-container2">
+                <img :src="headerIcon" id="header-icon">
+            </div>
+        </div> 
+
         <div id="header-content">
             <div id="header-close-button-container">
                 <button id="header-content-close" v-on:click="headerClose()">X</button>
@@ -18,9 +25,11 @@
 
 <script>
 import gsap from "gsap";
+import headerIcon from "./../../assets/mify-icon.png";
 
 export default {
     name: 'Header',
+    headerIcon: headerIcon,
         data() {
             return {
 
