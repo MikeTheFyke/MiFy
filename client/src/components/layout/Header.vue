@@ -21,11 +21,9 @@
             </button>
         </div>
 
-        <div id="header-contact-container">
-            <div id="header-contact-container2">
+            <div id="header-contact-container">
                 <img :src="contactIcon" id="contact-icon">
             </div>
-        </div> 
 
     </div>
 </template>
@@ -158,4 +156,19 @@ export default {
     height: 50px;
 }
 
+#header-contact-container{
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 10%;
+    text-align: center;   
+}
+
+#header-contact-container2{
+}
+
+#contact-icon{
+    width: 75px;
+    height: 75px;
+}
 </style>
