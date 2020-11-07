@@ -1,12 +1,6 @@
 <template>
     <div>
 
-        <div id="header-icon-container">
-            <div id="header-icon-container2">
-                <img :src="headerIcon" id="header-icon">
-            </div>
-        </div> 
-
         <div id="header-content">
             <div id="header-close-button-container">
                 <button id="header-content-close" v-on:click="headerClose()">X</button>
@@ -20,6 +14,13 @@
                 <div class="header-div" id="header-div-bottom"></div>
             </button>
         </div>
+
+        <div id="header-icon-container">
+            <div id="header-icon-container2">
+                <img :src="headerIcon" id="header-icon">
+            </div>
+        </div> 
+
     </div>
 </template>
 
@@ -29,10 +30,9 @@ import headerIcon from "./../../assets/mify-icon.png";
 
 export default {
     name: 'Header',
-    headerIcon: headerIcon,
         data() {
             return {
-
+                headerIcon: headerIcon,
             }
         },
         methods: {
@@ -125,6 +125,25 @@ export default {
 
 #header-div-bottom{
     width: 75%;
+}
+
+#header-icon-container{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 10%;
+    padding: 20px;
+}
+
+#header-icon-container2{
+    width: 100%;
+    text-align: center;
+}
+
+#header-icon{
+    width: 50px;
+    height: 50px;
 }
 
 </style>
