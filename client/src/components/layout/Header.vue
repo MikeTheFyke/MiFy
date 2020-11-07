@@ -1,11 +1,11 @@
 <template>
     <div>
         <div id="header-content">
-
+            <button id="header-content-close" v-on:click="headerClose()">X</button>
         </div>    
 
         <div id="header-bar">
-            <button v-on:click="headerExpand()" id="header-button">
+            <button id="header-button" v-on:click="headerExpand()">
                 <div class="header-div" id="header-div-top"></div>
                 <div class="header-div" id="header-div-middle"></div>
                 <div class="header-div" id="header-div-bottom"></div>
@@ -28,6 +28,10 @@ export default {
             headerExpand() {
                 gsap.to('#header-content', 1.5, { x: 0 } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#0e0e2b' } );
+            },
+            headerClose() {
+                gsap.to('#header-content', 1.5, { x: '-100vw' } );
+                gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
             }
         }, 
         mounted: function() {
