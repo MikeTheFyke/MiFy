@@ -1,7 +1,9 @@
 <template>
     <div>
         <div id="header-content">
-            <button id="header-content-close" v-on:click="headerClose()">X</button>
+            <div id="header-close-button-container">
+                <button id="header-content-close" v-on:click="headerClose()">X</button>
+            </div>
         </div>    
 
         <div id="header-bar">
@@ -26,16 +28,16 @@ export default {
         },
         methods: {
             headerExpand() {
-                gsap.to('#header-content', 1.5, { x: 0 } );
+                gsap.to('#header-content', 1.5, { scaleX: 1, transformOrigin: "left" } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#0e0e2b' } );
             },
             headerClose() {
-                gsap.to('#header-content', 1.5, { x: '-100vw' } );
+                gsap.to('#header-content', 1.5, { scaleX: 0, transformOrigin: "left" } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
             }
         }, 
         mounted: function() {
-            gsap.to('#header-content', 0, { x: '-100vw' } );
+            gsap.to('#header-content', 0, { scaleX: 0 } );
 
             document.getElementById('header-button').addEventListener('mouseover', function(){
                 gsap.to('.header-div', 1.5, { backgroundColor: "white" } );
@@ -55,9 +57,29 @@ export default {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100vw;
+    height: 100vh;
     width: 100vw;
     background-color: #20203a;
+}
+
+#header-close-button-container{
+    position: relative;
+    top: 0px;
+    right: 60px;
+    width: 100%;
+    height: 50px;
+    padding: 30px;
+}
+
+#header-content-close{
+    position: relative;
+    top: 0px;
+    float: right;
+    font-size: 50px;
+    color: #f20000;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
 }
 
 #header-bar{
