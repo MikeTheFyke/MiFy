@@ -1,7 +1,11 @@
 <template>
     <div>
+        <div id="header-content">
+
+        </div>    
+
         <div id="header-bar">
-            <button id="header-button">
+            <button v-on:click="headerExpand()" id="header-button">
                 <div class="header-div" id="header-div-top"></div>
                 <div class="header-div" id="header-div-middle"></div>
                 <div class="header-div" id="header-div-bottom"></div>
@@ -11,12 +15,46 @@
 </template>
 
 <script>
+import gsap from "gsap";
+
 export default {
+    name: 'Header',
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+            headerExpand() {
+                gsap.to('#header-content', 1.5, { x: 0 } );
+                gsap.to('#header-bar', 1, { backgroundColor: '#0e0e2b' } );
+            }
+        }, 
+        mounted: function() {
+            gsap.to('#header-content', 0, { x: '-100vw' } );
+
+            document.getElementById('header-button').addEventListener('mouseover', function(){
+                gsap.to('.header-div', 1.5, { backgroundColor: "white" } );
+            });
+
+            document.getElementById('header-button').addEventListener('mouseout', function(){
+                gsap.to('.header-div', 1.5, { backgroundColor: "#f20000" } );
+            });
+        }
     
 }
 </script>
 
 <style scoped>
+
+#header-content{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vw;
+    width: 100vw;
+    background-color: #20203a;
+}
 
 #header-bar{
     position: fixed;
@@ -44,7 +82,7 @@ export default {
     width: 100%;
     height: 10px;
     border-radius: 5px;
-    background-color: #f20000;;
+    background-color: #f20000;
     margin-bottom: 5px;
 }
 
