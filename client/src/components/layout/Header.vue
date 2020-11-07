@@ -23,10 +23,12 @@
 
             <div id="header-contact-container">
                 <button id="contact-button" v-on:click="contactExpand()" ><img :src="contactIcon" id="contact-icon"></button>
-                <h1 class="contact-text">Mike Fyke</h1>
-                <h1 class="contact-text">Toronto, Ontario</h1>
-                <h1 class="contact-text">mikefyke@hotmail.com</h1>
-                <h1 class="contact-text">1-705-808-1229</h1>
+                <div id="contact-text-container">
+                    <h1 class="contact-text">Mike Fyke</h1>
+                    <h1 class="contact-text">Toronto, Ontario</h1>
+                    <h1 class="contact-text">mikefyke@hotmail.com</h1>
+                    <h1 class="contact-text">1-705-808-1229</h1>
+                </div>
             </div>
 
     </div>
@@ -120,7 +122,7 @@ export default {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 10%;
+    width: 15%;
     height: 100vh;
     background-color: #20203a;
     padding: 20px;
@@ -173,9 +175,9 @@ export default {
 #header-contact-container{
     position: absolute;
     bottom: 20px;
-    left: 15px;
-    width: 10%;
-    text-align: center;   
+    width: 15%;
+    text-align: center;
+    padding: 10px;   
 }
 
 #contact-button{
@@ -191,8 +193,7 @@ export default {
 
 .contact-text{
     color: white;
-    font-size: 0.8em;
-    margin: 0px;
+    font-size: calc(6px + .5vw);
     white-space: nowrap;
 }
 </style>
