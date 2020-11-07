@@ -22,7 +22,7 @@
         </div>
 
             <div id="header-contact-container">
-                <img :src="contactIcon" id="contact-icon">
+                <button id="contact-button" v-on:click="contactExpand()" ><img :src="contactIcon" id="contact-icon"></button>
             </div>
 
     </div>
@@ -39,6 +39,7 @@ export default {
             return {
                 headerIcon: headerIcon,
                 contactIcon: contactIcon,
+                expanded: false,
             }
         },
         methods: {
@@ -53,7 +54,16 @@ export default {
                 gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
                 gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
                 gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
-            }
+            },
+            contactExpand(){
+                if (this.expanded === false){
+                    gsap.to('#header-contact-container', 1, { y:'-100px'} );
+                    this.expanded = true;
+                } else if (this.expanded === true){
+                    gsap.to('#header-contact-container', 1, { y:0} );
+                    this.expanded = false;
+                }
+            },
         }, 
         mounted: function() {
             gsap.to('#header-content', 0, { scaleX: 0 } );
@@ -164,7 +174,10 @@ export default {
     text-align: center;   
 }
 
-#header-contact-container2{
+#contact-button{
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
 }
 
 #contact-icon{
