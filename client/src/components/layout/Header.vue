@@ -80,6 +80,7 @@ export default {
     background-color: transparent;
     border-color: transparent;
     outline: none;
+    cursor: pointer;
 }
 
 #header-bar{
@@ -102,6 +103,7 @@ export default {
     border-color: transparent;
     outline: none;
     padding: 0px;
+    cursor: pointer;
 }
 
 .header-div{
