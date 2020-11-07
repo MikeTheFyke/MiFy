@@ -1,6 +1,12 @@
 <template>
     <div>
 
+        <div id="header-icon-container">
+            <div id="header-icon-container2">
+                <img :src="headerIcon" id="header-icon">
+            </div>
+        </div> 
+
         <div id="header-content">
             <div id="header-close-button-container">
                 <button id="header-content-close" v-on:click="headerClose()">X</button>
@@ -14,12 +20,6 @@
                 <div class="header-div" id="header-div-bottom"></div>
             </button>
         </div>
-
-        <div id="header-icon-container">
-            <div id="header-icon-container2">
-                <img :src="headerIcon" id="header-icon">
-            </div>
-        </div> 
 
     </div>
 </template>
@@ -39,10 +39,14 @@ export default {
             headerExpand() {
                 gsap.to('#header-content', 1.5, { scaleX: 1, transformOrigin: "left" } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#0e0e2b' } );
+                gsap.to('#header-button', 0.5, { zIndex: 0, opacity: 0 } );
+                gsap.to('#header-icon-container', 0.5, { zIndex: 3, opacity: 1 } );
             },
             headerClose() {
                 gsap.to('#header-content', 1.5, { scaleX: 0, transformOrigin: "left" } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
+                gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
+                gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
             }
         }, 
         mounted: function() {
