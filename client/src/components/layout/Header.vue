@@ -50,23 +50,23 @@ export default {
         },
         methods: {
             headerExpand() {
-                gsap.to('#header-content', 1.5, { scaleX: 1, transformOrigin: "left" } );
+                gsap.to('#header-content', 1, { scaleX: 1, transformOrigin: "left" } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#0e0e2b' } );
                 gsap.to('#header-button', 0.5, { zIndex: 0, opacity: 0 } );
                 gsap.to('#header-icon-container', 0.5, { zIndex: 3, opacity: 1 } );
             },
             headerClose() {
-                gsap.to('#header-content', 1.5, { scaleX: 0, transformOrigin: "left" } );
+                gsap.to('#header-content', 1, { scaleX: 0, transformOrigin: "left" } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
                 gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
                 gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
             },
             contactExpand(){
                 if (this.expanded === false){
-                    gsap.to('#header-contact-container', 1, { y:'-100px'} );
+                    gsap.to('#header-contact-container', 0.5, { y:'-110px'} );
                     this.expanded = true;
                 } else if (this.expanded === true){
-                    gsap.to('#header-contact-container', 1, { y:0} );
+                    gsap.to('#header-contact-container', 0.5, { y:0} );
                     this.expanded = false;
                 }
             },
@@ -174,7 +174,7 @@ export default {
 
 #header-contact-container{
     position: absolute;
-    bottom: 20px;
+    bottom: -110px;
     width: 15%;
     text-align: center;
     padding: 10px;   
@@ -189,6 +189,10 @@ export default {
 #contact-icon{
     width: 75px;
     height: 75px;
+}
+
+#contact-text-container{
+    margin-top: 20px;
 }
 
 .contact-text{
