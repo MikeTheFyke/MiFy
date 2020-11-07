@@ -1,0 +1,5 @@
+MiFy
+
+Dependencies
+- Vue
+- Gsap
