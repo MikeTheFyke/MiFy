@@ -21,18 +21,26 @@
             </button>
         </div>
 
+        <div id="header-contact-container">
+            <div id="header-contact-container2">
+                <img :src="contactIcon" id="contact-icon">
+            </div>
+        </div> 
+
     </div>
 </template>
 
 <script>
 import gsap from "gsap";
 import headerIcon from "./../../assets/mify-icon.png";
+import contactIcon from "./../../assets/contact-icon.png";
 
 export default {
     name: 'Header',
         data() {
             return {
                 headerIcon: headerIcon,
+                contactIcon: contactIcon,
             }
         },
         methods: {
