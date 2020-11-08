@@ -6,6 +6,7 @@
     </div>
     <HelloWorld />
     <Provue />
+    <Threevue />
   </div>
 </template>
 
@@ -13,13 +14,15 @@
 import Header from './components/layout/Header.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import Provue from './components/Provue.vue'
+import Threevue from './components/Threevue.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     HelloWorld,
-    Provue
+    Provue,
+    Threevue
   },
   data () {
     return {
