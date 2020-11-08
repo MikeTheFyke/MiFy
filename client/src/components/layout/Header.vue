@@ -11,6 +11,21 @@
             <div id="header-close-button-container">
                 <button id="header-content-close" v-on:click="headerClose()">X</button>
             </div>
+
+            <div class="text-backA" id="text01-backA"></div>
+            <div class="text-backB" id="text01-backB"></div>
+            
+            <div class="text-backA" id="text02-backA"></div>
+            <div class="text-backB" id="text02-backB"></div>
+            
+            <div class="text-backA" id="text03-backA"></div>
+            <div class="text-backB" id="text03-backB"></div>
+            
+            <div id="content-text-container">
+                <img :src="processingText" id="proText">
+                <img :src="threeText" id="threeText">
+                <img :src="gsapText" id="gsapText">
+            </div>
         </div>    
 
         <div id="header-bar">
@@ -38,6 +53,9 @@
 import gsap from "gsap";
 import headerIcon from "./../../assets/mify-icon.png";
 import contactIcon from "./../../assets/contact-icon.png";
+import processingText from "./../../assets/Processing.png";
+import threeText from "./../../assets/ThreeJs.png";
+import gsapText from "./../../assets/Gsap.png";
 
 export default {
     name: 'Header',
@@ -45,6 +63,9 @@ export default {
             return {
                 headerIcon: headerIcon,
                 contactIcon: contactIcon,
+                processingText: processingText,
+                threeText: threeText,
+                gsapText: gsapText,
                 expanded: false,
             }
         },
@@ -80,6 +101,30 @@ export default {
 
             document.getElementById('header-button').addEventListener('mouseout', function(){
                 gsap.to('.header-div', 1.5, { backgroundColor: "#f20000" } );
+            });
+
+            document.getElementById('proText').addEventListener('mouseover', function(){
+                gsap.to('#text01-backB', 0.75, { scaleX: 1, transformOrigin: "left" } );
+            });
+
+            document.getElementById('proText').addEventListener('mouseout', function(){
+                gsap.to('#text01-backB', 0.75, { scaleX: 0, transformOrigin: "left" } );
+            });
+
+            document.getElementById('threeText').addEventListener('mouseover', function(){
+                gsap.to('#text02-backB', 0.75, { scaleX: 1, transformOrigin: "left" } );
+            });
+
+            document.getElementById('threeText').addEventListener('mouseout', function(){
+                gsap.to('#text02-backB', 0.75, { scaleX: 0, transformOrigin: "left" } );
+            });
+
+            document.getElementById('gsapText').addEventListener('mouseover', function(){
+                gsap.to('#text03-backB', 0.75, { scaleX: 1, transformOrigin: "left" } );
+            });
+
+            document.getElementById('gsapText').addEventListener('mouseout', function(){
+                gsap.to('#text03-backB', 0.75, { scaleX: 0, transformOrigin: "left" } );
             });
         }
     
@@ -117,7 +162,75 @@ export default {
     outline: none;
     cursor: pointer;
 }
+/*  */
+#text01-backA{
+    position: absolute;
+    top: 165px;  
+    background-color:white;
+    width: 575px;
+    height: 100px;
+    margin-left: 300px;
+}
 
+#text01-backB{
+    position: absolute;
+    top: 165px;  
+    background-color:#f20000;
+    width: 575px;
+    height: 100px;
+    margin-left: 300px;
+    border-bottom-right-radius: 100px;
+    transform: scaleX(0);
+}
+
+#text02-backA{
+    position: absolute;
+    top: 275px;  
+    background-color:white;
+    width: 530px;
+    height: 100px;
+    margin-left: 300px;
+}
+
+#text02-backB{
+    position: absolute;
+    top: 275px;  
+    background-color:#f20000;
+    width: 530px;
+    height: 100px;
+    margin-left: 300px;
+    border-bottom-right-radius: 100px;
+    transform: scaleX(0);
+}
+
+#text03-backA{
+    position: absolute;
+    top: 390px;  
+    background-color:white;
+    width: 530px;
+    height: 100px;
+    margin-left: 300px;
+}
+
+#text03-backB{
+    position: absolute;
+    top: 390px;  
+    background-color:#f20000;
+    width: 530px;
+    height: 100px;
+    margin-left: 300px;
+    border-bottom-right-radius: 100px;
+    transform: scaleX(0);
+}
+
+#content-text-container{
+    position: relative;
+    top: 50px;
+    margin-left: 300px;
+    width: 700px;
+}
+
+/*  */
 #header-bar{
     position: fixed;
     top: 0px;
@@ -154,9 +267,9 @@ export default {
 }
 
 #header-icon-container{
-    position: fixed;
+    position: absolute;
     top: 0px;
-    left: 0px;
+    left: 35px;
     height: 100vh;
     width: 10%;
     padding: 20px;
