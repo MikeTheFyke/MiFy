@@ -85,9 +85,11 @@ export default {
             contactExpand(){
                 if (this.expanded === false){
                     gsap.to('#header-contact-container', 0.5, { y:'-110px'} );
+                    gsap.to('#contact-text-container', 0.5, { opacity: 1 } );
                     this.expanded = true;
                 } else if (this.expanded === true){
                     gsap.to('#header-contact-container', 0.5, { y:0} );
+                    gsap.to('#contact-text-container', 0.5, { opacity: 0 } );
                     this.expanded = false;
                 }
             },
@@ -306,6 +308,7 @@ export default {
 
 #contact-text-container{
     margin-top: 20px;
+    opacity: 0;
 }
 
 .contact-text{
