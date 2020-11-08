@@ -22,7 +22,7 @@ export default {
           if (window.pageYOffset === 0) {
             clearInterval(this.intervalId)
           }
-          window.scroll(0, window.pageYOffset + window.innerHeight*4)
+          window.scroll(0, window.pageYOffset + window.innerHeight)
         }, 20)
       },
       scrollListener: function () {
@@ -48,11 +48,11 @@ export default {
 
 #Three-Container{
     Position: absolute;
-    top: 200vh;
+    top: 300vh;
     left: 20%;
     width: 80vw;
     height: 100vh;
-    background-color: #c4b486;
+    background-color: yellow;
 }
 
 </style>

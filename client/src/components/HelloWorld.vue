@@ -52,7 +52,7 @@ export default {
           if (window.pageYOffset === 0) {
             clearInterval(this.intervalId)
           }
-          window.scroll(0, window.pageYOffset + window.innerHeight*2)
+          window.scroll(0, window.pageYOffset + window.innerHeight )
         }, 20)
       },
       scrollListener: function () {

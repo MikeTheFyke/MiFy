@@ -1,6 +1,6 @@
 <template>
     <div id="Process-Container">
-
+        <h1 id="ProTitle">Processing</h1>
     <div id="scrollContainer3">
       <button id="scrollButton3" @click="scrollTop">Click</button>
     </div>
@@ -22,7 +22,7 @@ export default {
           if (window.pageYOffset === 0) {
             clearInterval(this.intervalId)
           }
-          window.scroll(0, window.pageYOffset + window.innerHeight*3)
+          window.scroll(0, window.pageYOffset + window.innerHeight)
         }, 20)
       },
       scrollListener: function () {
@@ -53,6 +53,12 @@ export default {
     width: 80vw;
     height: 100vh;
     background-color: #c4bead;
+}
+
+#ProTitle{
+    Position: relative;
+    top: 20px;
+    color: red;
 }
 
 </style>

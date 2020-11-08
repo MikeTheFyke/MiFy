@@ -7,14 +7,16 @@
     <HelloWorld />
     <Provue />
     <Threevue />
+    <Greenvue />
   </div>
 </template>
 
 <script>
-import Header from './components/layout/Header.vue'
-import HelloWorld from './components/HelloWorld.vue'
-import Provue from './components/Provue.vue'
-import Threevue from './components/Threevue.vue'
+import Header from './components/layout/Header.vue';
+import HelloWorld from './components/HelloWorld.vue';
+import Provue from './components/Provue.vue';
+import Threevue from './components/Threevue.vue';
+import Greenvue from './components/Greenvue.vue';
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     Header,
     HelloWorld,
     Provue,
-    Threevue
+    Threevue,
+    Greenvue
   },
   data () {
     return {
