@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Header />
     <div id="scrollContainer">
       <button id="scrollButton" @click="scrollTop">Click</button>
     </div>
+    <Header />
     <HelloWorld />
     <Provue />
     <Threevue />
@@ -38,24 +38,17 @@ export default {
           if (window.pageYOffset === 0) {
             clearInterval(this.intervalId)
           }
+          console.log("WindowHeight = " + window.innerHeight)
+          console.log("PageOffset = " + window.pageYOffset)
           window.scroll(0, window.pageYOffset + window.innerHeight)
         }, 20)
       },
-      scrollListener: function () {
-        this.visible = window.scrollY > 150
-      }
-  },
-    mounted: function () {
-      window.addEventListener('scroll', this.scrollListener)
-    },
-    beforeDestroy: function () {
-      window.removeEventListener('scroll', this.scrollListener)
-    }
+  }
 }
 
 </script>
 
-<style>
+<style scoped>
 
 #scrollContainer{
   position: absolute;

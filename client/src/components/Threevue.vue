@@ -1,8 +1,9 @@
 <template>
     <div id="Three-Container">
 
-    <div id="scrollContainer4">
-      <button id="scrollButton4" @click="scrollTop">Click</button>
+
+    <div id="scrollContainer">
+      <button id="scrollButton" @click="scrollTop">Click</button>
     </div>
 
     </div>
@@ -13,7 +14,7 @@ export default {
   name: 'Threevue',
   data () {
     return {
-      visible: false
+      
     }
   },
   methods: {
@@ -22,28 +23,24 @@ export default {
           if (window.pageYOffset === 0) {
             clearInterval(this.intervalId)
           }
-          window.scroll(0, window.pageYOffset + window.innerHeight)
+          console.log("Window Height = " + window.innerHeight)
+          window.scroll(0,window.pageYOffset + (window.innerHeight*3) )
         }, 20)
-      },
-      scrollListener: function () {
-        this.visible = window.scrollY > 150
       }
-  },
-    mounted: function () {
-      window.addEventListener('scroll', this.scrollListener)
-    },
-    beforeDestroy: function () {
-      window.removeEventListener('scroll', this.scrollListener)
-    }
+  }
 }
 </script>
 
 <style scoped>
 
-#scrollContainer4{
+#scrollContainer{
   position: absolute;
   bottom: 10px;
   left: 50%;
+}
+
+#scrollButton{
+
 }
 
 #Three-Container{

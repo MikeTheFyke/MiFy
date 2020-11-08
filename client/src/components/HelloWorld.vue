@@ -28,8 +28,8 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
 
-    <div id="scrollContainer2">
-      <button id="scrollButton2" @click="scrollTop">Click</button>
+    <div id="scrollContainer">
+      <button id="scrollButton" @click="scrollTop">Click</button>
     </div>
 
   </div>
@@ -53,30 +53,25 @@ export default {
             clearInterval(this.intervalId)
           }
           console.log("Window Height = " + window.innerHeight)
-          window.scroll(0, window.pageYOffset + window.innerHeight )
+          window.scroll(0,(window.innerHeight*2) )
         }, 20)
-      },
-      scrollListener: function () {
-        this.visible = window.scrollY > 150
       }
-  },
-    mounted: function () {
-      window.addEventListener('scroll', this.scrollListener)
-    },
-    beforeDestroy: function () {
-      window.removeEventListener('scroll', this.scrollListener)
-    }
+  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-#scrollContainer2{
+#scrollContainer{
   position: absolute;
   bottom: 10px;
   left: 50%;
 }
+
+#scrollButton{
+
+}
+
 
 .hello{
   Position: absolute;
