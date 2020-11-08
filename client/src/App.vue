@@ -16,7 +16,7 @@ import Header from './components/layout/Header.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import Provue from './components/Provue.vue';
 import Threevue from './components/Threevue.vue';
-import Greenvue from './components/Greenvue.vue';
+import Greenvue from './components/Green.vue';
 
 export default {
   name: 'App',

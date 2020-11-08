@@ -52,6 +52,7 @@ export default {
           if (window.pageYOffset === 0) {
             clearInterval(this.intervalId)
           }
+          console.log("Window Height = " + window.innerHeight)
           window.scroll(0, window.pageYOffset + window.innerHeight )
         }, 20)
       },
