@@ -46,6 +46,7 @@ export default {
   Position: absolute;
   top: 100vh;
   left: 20%;
+  height: 100vh;
 }
 
 h3 {

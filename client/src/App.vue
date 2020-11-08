@@ -25,16 +25,16 @@ export default {
   },
   methods: {
     scrollTop: function () {
-      this.intervalId = setInterval(() => {
-        if (window.pageYOffset === 0) {
-          clearInterval(this.intervalId)
-        }
-        window.scroll(0, window.pageYOffset + window.innerHeight)
-      }, 20)
-    },
-    scrollListener: function () {
-      this.visible = window.scrollY > 150
-    }
+        this.intervalId = setInterval(() => {
+          if (window.pageYOffset === 0) {
+            clearInterval(this.intervalId)
+          }
+          window.scroll(0, window.pageYOffset + window.innerHeight)
+        }, 20)
+      },
+      scrollListener: function () {
+        this.visible = window.scrollY > 150
+      }
   },
     mounted: function () {
       window.addEventListener('scroll', this.scrollListener)
