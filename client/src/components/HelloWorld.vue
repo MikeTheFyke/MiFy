@@ -49,11 +49,8 @@ export default {
   methods: {
     scrollTop: function () {
         this.intervalId = setInterval(() => {
-          if (window.pageYOffset === 0) {
-            clearInterval(this.intervalId)
-          }
           console.log("Window Height = " + window.innerHeight)
-          window.scroll(0,(window.innerHeight*2) )
+          window.scroll(0, (window.innerHeight*2) )
         }, 20)
       }
   }
@@ -67,11 +64,6 @@ export default {
   bottom: 10px;
   left: 50%;
 }
-
-#scrollButton{
-
-}
-
 
 .hello{
   Position: absolute;

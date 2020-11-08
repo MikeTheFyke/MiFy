@@ -3,7 +3,7 @@
         <h1 id="ProTitle">Processing</h1>
 
     <div id="scrollContainer">
-      <button id="scrollButton" @click="scrollTop">Click</button>
+      <button id="scrollButton" @click="scrollDown">Click</button>
     </div>
 
     </div>
@@ -18,11 +18,8 @@ export default {
     }
   },
   methods: {
-    scrollTop: function () {
-        this.intervalId = setInterval(() => {
-          console.log("Window Height = " + window.innerHeight)
-          window.scroll(0,(window.innerHeight*3) )
-        }, 20)
+    scrollDown: function () {
+          window.scroll(0, (window.innerHeight * 2))
       }
   }
 }
@@ -36,13 +33,9 @@ export default {
   left: 50%;
 }
 
-#scrollButton{
-
-}
-
 #Process-Container{
     Position: absolute;
-    top: 200vh;
+    top: 100vh;
     left: 20%;
     width: 80vw;
     height: 100vh;
