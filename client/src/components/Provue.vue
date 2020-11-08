@@ -9,7 +9,7 @@ export default {
   name: 'Provue',
     data(){
         return {
-            
+
         }
     }
 
@@ -19,7 +19,10 @@ export default {
 <style scoped>
 
 #Process-Container{
-    width: 100vw;
+    Position: absolute;
+    top: 200vh;
+    left: 20%;
+    width: 80vw;
     height: 100vh;
     background-color: #c4bead;
 }

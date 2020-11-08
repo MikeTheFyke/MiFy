@@ -27,6 +27,11 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+
+    <div id="scrollContainer2">
+      <button id="scrollButton2" @click="scrollTop">Click</button>
+    </div>
+
   </div>
 </template>
 
@@ -35,12 +40,42 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  data () {
+    return {
+      visible: false
+    }
+  },
+  methods: {
+    scrollTop: function () {
+        this.intervalId = setInterval(() => {
+          if (window.pageYOffset === 0) {
+            clearInterval(this.intervalId)
+          }
+          window.scroll(0, window.pageYOffset + window.innerHeight*2)
+        }, 20)
+      },
+      scrollListener: function () {
+        this.visible = window.scrollY > 150
+      }
+  },
+    mounted: function () {
+      window.addEventListener('scroll', this.scrollListener)
+    },
+    beforeDestroy: function () {
+      window.removeEventListener('scroll', this.scrollListener)
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+#scrollContainer2{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
 
 .hello{
   Position: absolute;
