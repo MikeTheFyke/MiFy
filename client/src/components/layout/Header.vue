@@ -36,15 +36,15 @@
             </button>
         </div>
 
-            <div id="header-contact-container">
-                <button id="contact-button" v-on:click="contactExpand()" ><img :src="contactIcon" id="contact-icon"></button>
-                <div id="contact-text-container">
-                    <h1 class="contact-text">Mike Fyke</h1>
-                    <h1 class="contact-text">Toronto, Ontario</h1>
-                    <h1 class="contact-text">mikefyke@hotmail.com</h1>
-                    <h1 class="contact-text">1-705-808-1229</h1>
-                </div>
+        <div id="header-contact-container">
+            <button id="contact-button" v-on:click="contactExpand()" ><img :src="contactIcon" id="contact-icon"></button>
+            <div id="contact-text-container">
+                <h1 class="contact-text">Mike Fyke</h1>
+                <h1 class="contact-text">Toronto, Ontario</h1>
+                <h1 class="contact-text">mikefyke@hotmail.com</h1>
+                <h1 class="contact-text">1-705-808-1229</h1>
             </div>
+        </div>
 
     </div>
 </template>
@@ -139,7 +139,7 @@ export default {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: #20203a;
 }
