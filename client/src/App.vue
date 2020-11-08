@@ -5,18 +5,21 @@
       <button id="scrollButton" @click="scrollTop">Click</button>
     </div>
     <HelloWorld />
+    <Provue />
   </div>
 </template>
 
 <script>
 import Header from './components/layout/Header.vue'
 import HelloWorld from './components/HelloWorld.vue'
+import Provue from './components/Provue.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    HelloWorld
+    HelloWorld,
+    Provue
   },
   data () {
     return {
