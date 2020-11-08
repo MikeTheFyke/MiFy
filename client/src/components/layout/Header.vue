@@ -288,7 +288,7 @@ export default {
 }
 
 #header-contact-container{
-    position: absolute;
+    position: fixed;
     bottom: -110px;
     width: 15%;
     text-align: center;
