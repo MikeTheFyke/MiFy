@@ -32,7 +32,16 @@ export default {
   methods: {
     scrollDown: function () {
           window.scroll(0, window.pageYOffset + window.innerHeight)
-      }
+      },
+    scrollListener: function () {
+      this.visible = window.scrollY > 150
+    }
+      },
+  mounted: function () {
+    window.addEventListener('scroll', this.scrollListener)
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('scroll', this.scrollListener)
   }
 }
 

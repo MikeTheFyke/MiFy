@@ -22,9 +22,9 @@
             <div class="text-backB" id="text03-backB"></div>
             
             <div id="content-text-container">
-                <img :src="processingText" id="proText">
-                <img :src="threeText" id="threeText">
-                <img :src="gsapText" id="gsapText">
+                <img :src="processingText" id="proText" @click="scrollProcessing">
+                <img :src="threeText" id="threeText" @click="scrollThree">
+                <img :src="gsapText" id="gsapText" @click="scrollGsap">
             </div>
         </div>    
 
@@ -93,6 +93,9 @@ export default {
                     this.expanded = false;
                 }
             },
+            scrollProcessing() { window.scroll(0, (window.innerHeight)) },
+            scrollThree() { window.scroll(0, (window.innerHeight*2)) },
+            scrollGsap() { window.scroll(0, (window.innerHeight*3)) },
         }, 
         mounted: function() {
             gsap.to('#header-content', 0, { scaleX: 0 } );
@@ -292,7 +295,8 @@ export default {
     bottom: -110px;
     width: 15%;
     text-align: center;
-    padding: 10px;   
+    padding: 10px;
+    z-index: 5;   
 }
 
 #contact-button{
