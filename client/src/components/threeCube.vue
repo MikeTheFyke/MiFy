@@ -26,6 +26,7 @@ export default {
         let container = document.getElementById('cube-container');
 
         this.camera = new Three.PerspectiveCamera(70, container.clientWidth/container.clientHeight, 0.01, 1000);
+        
         this.camera.position.z = 5;
 
         this.scene = new Three.Scene();
@@ -36,8 +37,9 @@ export default {
 //////// Cubes
 for (var a = 0; a <= 1; a++){
         let geometry = new Three.BoxGeometry(0.2, 0.2, 0.2,);
-        let material = new Three.MeshNormalMaterial( { wireframe: true } );
-
+        let material = new Three.MeshNormalMaterial(
+            //  { wireframe: true } 
+        );
         for (var  i = 0; i < 7; i++){
             for (var j = 0; j < 4; j++){
             var mesh = new Three.Mesh(geometry, material);
@@ -49,7 +51,6 @@ for (var a = 0; a <= 1; a++){
         }
 //////// Larger Cubes
         let geometry2 = new Three.BoxGeometry(0.4, 0.4, 0.4);
-
         for (var  k = 0; k < 4; k++){
             for (var  l = 0; l < 2; l++){
                 for (var  m = 0; m < 2; m++){
