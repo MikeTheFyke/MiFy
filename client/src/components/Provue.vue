@@ -5,12 +5,18 @@
         <div>
 
         </div>  
+        <ProSno />
     </div>
 </template>
 
 <script>
+import ProSno from './ProSno.vue'
+
 export default {
   name: 'Provue',
+  components: {
+    ProSno: ProSno,
+  },
   data () {
     return {
     }
