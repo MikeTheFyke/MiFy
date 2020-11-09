@@ -19,9 +19,9 @@ export default {
 <style scoped>
 #Three-Container{
     Position: absolute;
-    top: 100vh;
-    left: 20%;
-    width: 80vw;
+    top: -100vh;
+    left: 0px;
+    width: 100vw;
     height: 100vh;
     background-color: yellow;
 }

@@ -110,7 +110,7 @@ export default {
                 gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
                 
                 gsap.to("#Process-Container", 2, { y: 0 })
-                gsap.to("#Three-Container", 2, { y: '-100vh' })
+                gsap.to("#Three-Container", 2, { y: '100vh' })
                 gsap.to("#Green-Container", 2, { x: 0 })
                  },
             scrollGsap() {
