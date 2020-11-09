@@ -74,7 +74,7 @@ export default {
                 gsap.to('#header-content', 1, { scaleX: 1, transformOrigin: "left" } );
                 gsap.to('#header-bar', 1, { backgroundColor: '#0e0e2b' } );
                 gsap.to('#header-button', 0.5, { zIndex: 0, opacity: 0 } );
-                gsap.to('#header-icon-container', 0.5, { zIndex: 3, opacity: 1 } );
+                gsap.to('#header-icon-container', 0.5, { zIndex: 5, opacity: 1 } );
             },
             headerClose() {
                 gsap.to('#header-content', 1, { scaleX: 0, transformOrigin: "left" } );
@@ -94,7 +94,14 @@ export default {
                 }
             },
             scrollProcessing() {
+                gsap.to('#header-content', 2, { scaleX: 0, transformOrigin: "left" } );
+                gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
+                gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
+                gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
+                
                 gsap.to("#Process-Container", 2, { y: '-100vh' })
+                gsap.to("#Three-Container", 2, { y: 0 })
+                gsap.to("#Green-Container", 2, { y: 0 })
                  },
             scrollThree() { window.scroll(0, (window.innerHeight*2)) },
             scrollGsap() { window.scroll(0, (window.innerHeight*3)) },
@@ -147,6 +154,7 @@ export default {
     height: 100%;
     width: 100vw;
     background-color: #20203a;
+    z-index: 4;
 }
 
 #header-close-button-container{
@@ -247,6 +255,7 @@ export default {
     background-color: #20203a;
     padding: 20px;
     text-align: center;
+    z-index: 4;
 }
 
 #header-button{
@@ -280,6 +289,7 @@ export default {
     height: 100vh;
     width: 10%;
     padding: 20px;
+    z-index: 4;
 }
 
 #header-icon-container2{
