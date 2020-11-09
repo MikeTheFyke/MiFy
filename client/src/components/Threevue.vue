@@ -24,11 +24,13 @@ export default {
     width: 100vw;
     height: 100vh;
     background-color: yellow;
+    opacity: 0;
 }
 
 #ThreeTitle{
     Position: relative;
     top: 20px;
+    left: 20%;
     color: red;
 }
 

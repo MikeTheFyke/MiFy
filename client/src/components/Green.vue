@@ -7,6 +7,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'Greenvue',
   data () {
@@ -24,11 +26,13 @@ export default {
     width: 100vw;
     height: 100vh;
     background-color: blue;
+    opacity: 0;
 }
 
 #GreenTitle{
     Position: relative;
     top: 20px;
+    left: 20%;
     color: red;
 }
 

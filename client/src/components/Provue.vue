@@ -1,6 +1,10 @@
 <template>
     <div id="Process-Container">
         <h1 id="ProTitle">Processing</h1>
+
+        <div>
+
+        </div>  
     </div>
 </template>
 
@@ -19,15 +23,17 @@ export default {
 #Process-Container{
     Position: absolute;
     top: 100vh;
-    left: 20%;
-    width: 80vw;
+    left: 0px;
+    width: 100vw;
     height: 100vh;
     background-color: #c4bead;
+    opacity: 0;    
 }
 
 #ProTitle{
     Position: relative;
     top: 20px;
+    left: 20%;
     color: red;
 }
 

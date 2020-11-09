@@ -99,9 +99,9 @@ export default {
                 gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
                 gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
                 
-                gsap.to("#Process-Container", 2, { y: '-100vh' })
-                gsap.to("#Three-Container", 2, { y: 0 })
-                gsap.to("#Green-Container", 2, { x: 0 })
+                gsap.to("#Process-Container", 1, { y: '-100vh', opacity: 1})
+                gsap.to("#Three-Container", 1, { y: 0, opacity: 0})
+                gsap.to("#Green-Container", 1, { x: 0, opacity: 0})
                  },
             scrollThree() {
                 gsap.to('#header-content', 2, { scaleX: 0, transformOrigin: "left" } );
@@ -109,9 +109,9 @@ export default {
                 gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
                 gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
                 
-                gsap.to("#Process-Container", 2, { y: 0 })
-                gsap.to("#Three-Container", 2, { y: '100vh' })
-                gsap.to("#Green-Container", 2, { x: 0 })
+                gsap.to("#Process-Container", 1, { y: 0, opacity: 0})
+                gsap.to("#Three-Container", 1, { y: '100vh', opacity: 1})
+                gsap.to("#Green-Container", 1, { x: 0,  opacity: 0})
                  },
             scrollGsap() {
                 gsap.to('#header-content', 2, { scaleX: 0, transformOrigin: "left" } );
@@ -119,9 +119,9 @@ export default {
                 gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
                 gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
                 
-                gsap.to("#Process-Container", 2, { y: 0 })
-                gsap.to("#Three-Container", 2, { y: 0 })
-                gsap.to("#Green-Container", 2, { x: '-100vw' })
+                gsap.to("#Process-Container", 1, { y: 0, opacity: 0})
+                gsap.to("#Three-Container", 1, { y: 0, opacity: 0})
+                gsap.to("#Green-Container", 1, { x: '-100vw', opacity: 1})
                  },
         }, 
         mounted: function() {
