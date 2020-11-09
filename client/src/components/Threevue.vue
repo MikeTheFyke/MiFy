@@ -15,13 +15,7 @@ export default {
   name: 'Threevue',
   data () {
     return {
-      visible: false
     }
-  },
-  methods: {
-    scrollDown: function () {
-          window.scroll(0, (window.innerHeight * 3) )
-      }
   }
 }
 </script>
@@ -36,7 +30,7 @@ export default {
 
 #Three-Container{
     Position: absolute;
-    top: 200vh;
+    top: 100vh;
     left: 20%;
     width: 80vw;
     height: 100vh;

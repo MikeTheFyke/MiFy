@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <div id="scrollContainer">
-      <button id="scrollButton" @click="scrollDown">Click</button>
-    </div>
     <Header />
     <Provue />
     <Threevue />
@@ -26,33 +23,11 @@ export default {
   },
   data () {
     return {
-      visible: false
     }
-  },
-  methods: {
-    scrollDown: function () {
-          window.scroll(0, window.pageYOffset + window.innerHeight)
-      },
-    scrollListener: function () {
-      this.visible = window.scrollY > 150
-    }
-      },
-  mounted: function () {
-    window.addEventListener('scroll', this.scrollListener)
-  },
-  beforeDestroy: function () {
-    window.removeEventListener('scroll', this.scrollListener)
   }
 }
-
 </script>
 
 <style scoped>
-
-#scrollContainer{
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-}
 
 </style>

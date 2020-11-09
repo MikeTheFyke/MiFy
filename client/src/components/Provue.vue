@@ -1,11 +1,6 @@
 <template>
     <div id="Process-Container">
         <h1 id="ProTitle">Processing</h1>
-
-    <div id="scrollContainer">
-      <button id="scrollButton" @click="scrollDown">Click</button>
-    </div>
-
     </div>
 </template>
 
@@ -14,24 +9,12 @@ export default {
   name: 'Provue',
   data () {
     return {
-      visible: false
     }
-  },
-  methods: {
-    scrollDown: function () {
-          window.scroll(0, (window.innerHeight * 2))
-      }
   }
 }
 </script>
 
 <style scoped>
-
-#scrollContainer{
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-}
 
 #Process-Container{
     Position: absolute;

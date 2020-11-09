@@ -93,7 +93,9 @@ export default {
                     this.expanded = false;
                 }
             },
-            scrollProcessing() { window.scroll(0, (window.innerHeight)) },
+            scrollProcessing() {
+                gsap.to("#Process-Container", 2, { y: '-100vh' })
+                 },
             scrollThree() { window.scroll(0, (window.innerHeight*2)) },
             scrollGsap() { window.scroll(0, (window.innerHeight*3)) },
         }, 

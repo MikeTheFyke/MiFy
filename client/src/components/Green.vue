@@ -15,13 +15,7 @@ export default {
   name: 'Greenvue',
   data () {
     return {
-      visible: false
     }
-  },
-  methods: {
-    scrollTop: function () {
-          window.scroll(0,0)
-      }
   }
 }
 </script>
@@ -36,7 +30,7 @@ export default {
 
 #Green-Container{
     Position: absolute;
-    top: 300vh;
+    top: 200vh;
     left: 20%;
     width: 80vw;
     height: 100vh;
