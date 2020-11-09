@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ThreeCube from './ThreeCube.vue';
+import ThreeCube from '.ThreeCube.vue';
 
 export default {
   name: 'Threevue',
