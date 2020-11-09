@@ -2,13 +2,18 @@
     <div id="Three-Container">
 
     <h1 id="ThreeTitle">Three Js</h1>
-
+    <ThreeCube />
     </div>
 </template>
 
 <script>
+import ThreeCube from './ThreeCube.vue';
+
 export default {
   name: 'Threevue',
+  components: {
+    ThreeCube,
+  },
   data () {
     return {
     }
