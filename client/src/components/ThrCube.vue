@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import * as Three from 'three'
+import * as Three from './three'
 
 export default {
-  name: 'ThreeCube',
+  name: 'ThrCube',
   data() {
     return {
       camera: null,
