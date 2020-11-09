@@ -3,10 +3,6 @@
 
     <h1 id="GreenTitle">GSAP</h1>
 
-    <div id="scrollContainer">
-      <button id="scrollButton" @click="scrollTop">Click</button>
-    </div>
-
     </div>
 </template>
 
@@ -21,18 +17,11 @@ export default {
 </script>
 
 <style scoped>
-
-#scrollContainer{
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-}
-
 #Green-Container{
     Position: absolute;
-    top: 200vh;
-    left: 20%;
-    width: 80vw;
+    top: 0px;
+    left: 100vw;
+    width: 100vw;
     height: 100vh;
     background-color: blue;
 }

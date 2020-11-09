@@ -101,10 +101,28 @@ export default {
                 
                 gsap.to("#Process-Container", 2, { y: '-100vh' })
                 gsap.to("#Three-Container", 2, { y: 0 })
-                gsap.to("#Green-Container", 2, { y: 0 })
+                gsap.to("#Green-Container", 2, { x: 0 })
                  },
-            scrollThree() { window.scroll(0, (window.innerHeight*2)) },
-            scrollGsap() { window.scroll(0, (window.innerHeight*3)) },
+            scrollThree() {
+                gsap.to('#header-content', 2, { scaleX: 0, transformOrigin: "left" } );
+                gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
+                gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
+                gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
+                
+                gsap.to("#Process-Container", 2, { y: 0 })
+                gsap.to("#Three-Container", 2, { y: '-100vh' })
+                gsap.to("#Green-Container", 2, { x: 0 })
+                 },
+            scrollGsap() {
+                gsap.to('#header-content', 2, { scaleX: 0, transformOrigin: "left" } );
+                gsap.to('#header-bar', 1, { backgroundColor: '#20203a' } );
+                gsap.to('#header-button', 0.5, { zIndex: 2, opacity: 1 } );
+                gsap.to('#header-icon-container', 0.5, { zIndex: 0, opacity: 0 } );
+                
+                gsap.to("#Process-Container", 2, { y: 0 })
+                gsap.to("#Three-Container", 2, { y: 0 })
+                gsap.to("#Green-Container", 2, { x: '-100vw' })
+                 },
         }, 
         mounted: function() {
             gsap.to('#header-content', 0, { scaleX: 0 } );

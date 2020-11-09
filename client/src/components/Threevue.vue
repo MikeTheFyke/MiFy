@@ -3,10 +3,6 @@
 
     <h1 id="ThreeTitle">Three Js</h1>
 
-    <div id="scrollContainer2">
-      <button id="scrollButton2" @click="scrollDown">Click</button>
-    </div>
-
     </div>
 </template>
 
@@ -21,13 +17,6 @@ export default {
 </script>
 
 <style scoped>
-
-#scrollContainer2{
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-}
-
 #Three-Container{
     Position: absolute;
     top: 100vh;
