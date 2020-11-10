@@ -11,6 +11,7 @@ export default {
     data() {
         return {
         ctx: null,
+        framesPerSecond : 30,
         }
     },
         mounted: function () {
@@ -43,7 +44,7 @@ export default {
                         ctx.arc(25, snowY + i, 10, 0 ,2*Math.PI);
                         ctx.fill();
                     }
-                }, 3000)
+                }, 1000 / this.framesPerSecond)
             }
     },
 }
