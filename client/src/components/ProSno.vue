@@ -1,7 +1,7 @@
 <template>
     <div id="SnoFlakes">
+        <canvas id="snowing-canvas"></canvas>
         <div id="SnoFlake">
-            <canvas id="snowing-canvas"></canvas>
         </div>
     </div>
 </template>
@@ -11,17 +11,20 @@ import gsap from "gsap";
 
 export default {
     data() {
+        return {
         canvas: null,
-        }, 
-        methods: {
 
-        },
+        }
+    },
+    methods: {
+
+    },
         mounted() {
             var ctx = document.getElementById("snowing-canvas");
-            canvas = ctx.getContext('2d');
+            this.canvas = ctx.getContext('2d');
 
-                ctx.fillStyle = "black";
-                ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+                this.ctx.fillStyle = "black";
+                this.ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
 
             gsap.to("#SnoFlake", { duration: 5, y: '500vw', delay: 5})
         }
@@ -31,8 +34,13 @@ export default {
 <style scoped>
 
 #snowing-canvas{
+    position: absolute;
+    top: 100px;
+    left: 300px;
     width: 150px;
     height: 100px;
+    border-color: black;
+    border-style: solid;
 }
 
 #SnoFlake{
