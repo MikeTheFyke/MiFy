@@ -17,7 +17,6 @@ export default {
         mounted: function () {
             this.ctx = document.getElementById('snowing-canvas').getContext('2d');
             this.fillCanvas(this.ctx);
-            this.snowing(this.ctx);
             // document.getElementById('snowing-canvas').addEventListener('mouseover', function(){ gsap.to('#snowing-canvas', 0.75, { x: "-300px" } ); });
             // document.getElementById('snowing-canvas').addEventListener('mouseout', function(){ gsap.to('#snowing-canvas', 0.75, { x: 0 } ); });
         },
@@ -30,23 +29,7 @@ export default {
                 ctx.fillStyle = '#c4bead';
                 ctx.fillRect(0,125,300,25);
         },
-            snowing : function (ctx) {
-                this.intervalid = setInterval(function(){
-                var snowY = 0;
-                    for( var i = 0; i <= 100; i++){
-                        ctx.fillStyle = '#c4bead';
-                        ctx.beginPath();
-                        ctx.arc(25, snowY + i, 10, 0 ,2*Math.PI);
-                        ctx.fill();
-                        
-                        ctx.fillStyle = '#a9b1c4';
-                        ctx.beginPath();
-                        ctx.arc(25, snowY + i, 10, 0 ,2*Math.PI);
-                        ctx.fill();
-                    }
-                }, 1000 / this.framesPerSecond)
-            }
-    },
+    }
 }
 </script>
 
@@ -55,7 +38,7 @@ export default {
 #SnoFlakes{
     position: absolute;
     top: 100px;
-    left: 300px;
+    margin-left: 25%;
     background-color: #20203a;
     width: 300px;
     height: 200px;
