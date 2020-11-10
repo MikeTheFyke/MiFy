@@ -1,7 +1,8 @@
 <template>
     <div id="Process-Container">
+      <div id=TitleContainer>
         <h1 id="ProTitle">Processing</h1>
-
+      </div>
         <div>
 
         </div>  
@@ -32,15 +33,22 @@ export default {
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background-color: #c4bead;
-    opacity: 0;    
+    background-color: white;
+    opacity: 0;
+}
+
+#TitleContainer{
+  width: 100%;
 }
 
 #ProTitle{
     Position: relative;
-    top: 20px;
+    top: 0px;
     left: 20%;
-    color: red;
+    color:  #f20000;
+    font-size: 80px;
+    width: 375px;
+    margin: 0px 20vw;
 }
 
 </style>
