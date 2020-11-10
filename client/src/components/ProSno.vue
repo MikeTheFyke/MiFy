@@ -12,22 +12,24 @@ import gsap from "gsap";
 export default {
     data() {
         return {
-        canvas: null,
-
+        ctx: null,
+        // canvas: null,
         }
     },
-    methods: {
+        mounted: function () {
+            this.ctx = document.getElementById('snowing-canvas').getContext('2d');
+            // this.canvas = this.ctx.getContext('2d');
 
-    },
-        mounted() {
-            var ctx = document.getElementById("snowing-canvas");
-            this.canvas = ctx.getContext('2d');
-
-                this.ctx.fillStyle = "black";
-                this.ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+            this.fillCanvas(this.ctx);
 
             gsap.to("#SnoFlake", { duration: 5, y: '500vw', delay: 5})
+        },
+        methods: {
+                fillCanvas (ctx){
+                ctx.fillStyle = "#ff0000";
+                ctx.fillRect(0,0,300,150);
         }
+    },
 }
 </script>
 
