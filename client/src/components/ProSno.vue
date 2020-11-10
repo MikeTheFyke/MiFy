@@ -11,16 +11,18 @@ import gsap from "gsap";
 
 export default {
     data() {
-        return{
-            ctx: "2D",
-            canvas: document.getElementById("snowing-canvas"),
-        }
-    }, 
+        canvas: null,
+        }, 
         methods: {
 
         },
         mounted() {
-            
+            var ctx = document.getElementById("snowing-canvas");
+            canvas = ctx.getContext('2d');
+
+                ctx.fillStyle = "black";
+                ctx.fillRect(0,0,this.canvas.width,this.canvas.height);
+
             gsap.to("#SnoFlake", { duration: 5, y: '500vw', delay: 5})
         }
 }
@@ -28,14 +30,9 @@ export default {
 
 <style scoped>
 
-#flake{
-    position: absolute;
-    top: 50px;
-    left: 30vw;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    background-color: white;
+#snowing-canvas{
+    width: 150px;
+    height: 100px;
 }
 
 #SnoFlake{
