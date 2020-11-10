@@ -28,8 +28,10 @@ export default {
         },
         methods: {
                 fillCanvas (ctx){
-                ctx.fillStyle = "white";
+                ctx.fillStyle = '#c4bead';
                 ctx.fillRect(0,0,300,150);
+
+                
         }
     },
 }
@@ -43,6 +45,10 @@ export default {
     left: 300px;
     width: 150px;
     height: 100px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 0.5px;
 }
 
 #SnoFlake{
