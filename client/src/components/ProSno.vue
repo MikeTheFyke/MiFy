@@ -13,20 +13,22 @@ export default {
     data() {
         return {
         ctx: null,
-        // canvas: null,
         }
     },
         mounted: function () {
             this.ctx = document.getElementById('snowing-canvas').getContext('2d');
-            // this.canvas = this.ctx.getContext('2d');
 
             this.fillCanvas(this.ctx);
+
+            document.getElementById('snowing-canvas').addEventListener('mouseover', function(){ gsap.to('#snowing-canvas', 0.75, { x: "-300px" } ); });
+
+            document.getElementById('snowing-canvas').addEventListener('mouseout', function(){ gsap.to('#snowing-canvas', 0.75, { x: 0 } ); });
 
             gsap.to("#SnoFlake", { duration: 5, y: '500vw', delay: 5})
         },
         methods: {
                 fillCanvas (ctx){
-                ctx.fillStyle = "#ff0000";
+                ctx.fillStyle = "white";
                 ctx.fillRect(0,0,300,150);
         }
     },
@@ -41,8 +43,6 @@ export default {
     left: 300px;
     width: 150px;
     height: 100px;
-    border-color: black;
-    border-style: solid;
 }
 
 #SnoFlake{
