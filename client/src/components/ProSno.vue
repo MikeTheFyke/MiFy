@@ -15,21 +15,18 @@ export default {
         }
     },
         mounted: function () {
+            setInterval (function() {
             this.ctx = document.getElementById('snowing-canvas').getContext('2d');
-            this.fillCanvas(this.ctx);
-            // document.getElementById('snowing-canvas').addEventListener('mouseover', function(){ gsap.to('#snowing-canvas', 0.75, { x: "-300px" } ); });
-            // document.getElementById('snowing-canvas').addEventListener('mouseout', function(){ gsap.to('#snowing-canvas', 0.75, { x: 0 } ); });
+                this.ctx.fillStyle = '#a9b1c4';
+                this.ctx.fillRect(0,0,300,150);
+                
+                this.ctx.fillStyle = '#c4bead';
+                this.ctx.fillRect(0,125,300,25);
+            },1000 / this.framesPerSecond)
         },
         methods: {
-                fillCanvas (ctx){
-                
-                ctx.fillStyle = '#a9b1c4';
-                ctx.fillRect(0,0,300,150);
-                
-                ctx.fillStyle = '#c4bead';
-                ctx.fillRect(0,125,300,25);
-        },
-    }
+
+        }
 }
 </script>
 
