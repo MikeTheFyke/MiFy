@@ -29,19 +29,21 @@ export default {
                 ctx.fillStyle = '#c4bead';
                 ctx.fillRect(0,125,300,25);
         },
-            snowing (ctx) {
-
-                for( var i = 0; i <= 100; i++){
-                    ctx.fillStyle = '#c4bead';
-                    ctx.beginPath();
-                    ctx.arc(25, i, 10, 0 ,2*Math.PI);
-                    ctx.fill();
-                    
-                    ctx.fillStyle = '#a9b1c4';
-                    ctx.beginPath();
-                    ctx.arc(25, i, 10, 0 ,2*Math.PI);
-                    ctx.fill();
-                }
+            snowing : function (ctx) {
+                this.intervalid = setInterval(function(){
+                var snowY = 0;
+                    for( var i = 0; i <= 100; i++){
+                        ctx.fillStyle = '#c4bead';
+                        ctx.beginPath();
+                        ctx.arc(25, snowY + i, 10, 0 ,2*Math.PI);
+                        ctx.fill();
+                        
+                        ctx.fillStyle = '#a9b1c4';
+                        ctx.beginPath();
+                        ctx.arc(25, snowY + i, 10, 0 ,2*Math.PI);
+                        ctx.fill();
+                    }
+                }, 3000)
             }
     },
 }
