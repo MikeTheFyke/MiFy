@@ -32,13 +32,14 @@ export default {
                 //     vy: 9,
                 // }
                 var circles = []
-                for (var j = 0; j <= 20; j++){
+                for (var j = 0; j <= 50; j++){
                     circles.push ({
                                 x: Math.floor(Math.random() * (max - min + 1) + min),
                                 y: 10,
-                                r: Math.floor(Math.random() * (10 - 1 + 1) + 1),
+                                r: Math.floor(Math.random() * (6 - 1 + 1) + 1),
                                 vx: 10,
-                                vy: 9,
+                                vy: 0,
+                                speed: Math.floor(Math.random() * (5 - 2 + 1) + 2),
                     })
                     console.log(circles)
                 }
@@ -56,13 +57,13 @@ export default {
                         ctx.arc(circles[i].x, circles[i].y, circles[i].r, 0 ,2*Math.PI, true);
                         ctx.fill();
                         
-                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 50 || 
-                            circles[i].y - circles[i].r + circles[i].vy < container.y){
-                            circles[i].y = 10
+                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 50){
+                            circles[i].y = circles[i].vy
+                            circles[i].speed = Math.random() * (5 - 1 + 1) + 1
                         }
 
                         else{
-                            circles[i].y += circles[i].vy/5
+                            circles[i].y += circles[i].speed
                         }
                     }
 
