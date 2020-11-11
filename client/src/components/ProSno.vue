@@ -41,6 +41,12 @@ export default {
                         if (this.x - this.r + this.vx > this.width || this.x + this.r + this.vx > this.width){
                             this.vx -= this.vx
                         }
+                        if (this.y + this.r + this.vy > this.height || this.y - this.r + this.vy < this.height){
+                            this.vy -= this.vy
+                        }
+
+                        this.x += this.vx
+                        this.y += this.vy
                     }
 
                 },1000 / this.framesPerSecond)
