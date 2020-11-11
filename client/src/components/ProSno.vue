@@ -16,6 +16,8 @@ export default {
     },
             methods: {
             snowing(ctx){
+                var max = 300;
+                var min = 0;
                 var container = { 
                      x: 0,
                      y: 0,
@@ -23,11 +25,11 @@ export default {
                      height: 200,
                 }
                 var circle ={
-                 x: 50,
-                 y: 100,
-                 r: 10,
-                 vx: 10,
-                 vy: 9,
+                    x: Math.floor(Math.random() * (max - min + 1) + min),
+                    y: 10,
+                    r: 10,
+                    vx: 10,
+                    vy: 9,
                 }
                 setInterval (function() {
                     ctx.fillStyle = '#a9b1c4';
@@ -43,16 +45,12 @@ export default {
                         ctx.arc(circle.x, circle.y, circle.r, 0 ,2*Math.PI, true);
                         ctx.fill();
                         
-                        if (circle.x - circle.r + circle.vx > container.x || 
-                            circle.x + circle.r + circle.vx > container.x + container.width){
-                            circle.vx = -circle.vx
-                        }
-                        if (circle.y + circle.r + circle.vy > container.y + container.height || 
+                        if (circle.y + circle.r + circle.vy >= container.height - 50 || 
                             circle.y - circle.r + circle.vy < container.y){
                             circle.vy = -circle.vy
                         }
 
-                        circle.x += circle.vx
+                        
                         circle.y += circle.vy
                     }
 
