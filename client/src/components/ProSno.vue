@@ -12,6 +12,8 @@ export default {
         return {
         ctx: null,
         framesPerSecond : 30,
+        mouseX: null,
+        mouseY: null,
         }
     },
             methods: {
@@ -33,7 +35,11 @@ export default {
                                 speed: Math.floor(Math.random() * (5 - 2 + 1) + 2),
                     })
                 }
-                
+                var ball = {
+                    ballX: container.width - 40,
+                    ballY: container.height - 35,
+                    ballR: 10,
+                }
                 setInterval (function() {
                     ctx.fillStyle = '#a9b1c4';
                     ctx.fillRect(0, 0, 300,150);
@@ -41,8 +47,13 @@ export default {
                     ctx.fillStyle = '#c4bead';
                     ctx.fillRect(0 ,125,300,25);
 
-                    console.log("Snowing width = " + container.width)
-                    console.log("Snowing height = " + container.height)
+                    // SnowBall01
+                    ctx.fillStyle = '#c4bead';
+                    ctx.beginPath();
+                    ctx.arc(ball.ballX, ball.ballY, ball.ballR, 0 ,2*Math.PI, true);
+                    ctx.fill(); 
+                    //
+
                     for( var i = 0; i < circles.length; i++){
                         ctx.fillStyle = '#c4bead';
                         ctx.beginPath();
@@ -64,6 +75,12 @@ export default {
             
                 this.ctx = document.getElementById('snowing-canvas').getContext('2d');
                 this.snowing(this.ctx);
+
+                onmousemove = function(e){
+                    console.log("mouse location:", e.clientX, e.clientY)
+                    this.mouseX = e.clientX;
+                    this.mouseY = e.clientY;
+                    }
             
         }
 }
