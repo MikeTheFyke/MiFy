@@ -1,5 +1,5 @@
 <template>
-    <div id="SnoFlakes">
+    <div id="SnoFlakes-Container">
         <canvas id="snowing-canvas"></canvas>
     </div>
 </template>
@@ -19,8 +19,8 @@ export default {
                 var container = { 
                      x: 0,
                      y: 0,
-                     width: 300,
-                     height: 200,
+                     width: document.getElementById('snowing-canvas').width,
+                     height: document.getElementById('snowing-canvas').height,
                 }
                 var circles = []
                 for (var j = 0; j <= 50; j++){
@@ -46,7 +46,8 @@ export default {
                         ctx.beginPath();
                         ctx.arc(circles[i].x, circles[i].y, circles[i].r, 0 ,2*Math.PI, true);
                         ctx.fill(); 
-                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 50) {
+                        console.log(container.width)
+                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 25) {
                             circles[i].y = circles[i].vy
                             circles[i].speed = Math.random() * (5 - 1 + 1) + 1
                         }
@@ -68,7 +69,7 @@ export default {
 
 <style scoped>
 
-#SnoFlakes{
+#SnoFlakes-Container{
     position: absolute;
     top: 100px;
     margin-left: 25%;
