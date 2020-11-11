@@ -47,11 +47,12 @@ export default {
                         
                         if (circle.y + circle.r + circle.vy >= container.height - 50 || 
                             circle.y - circle.r + circle.vy < container.y){
-                            circle.vy = -circle.vy
+                            circle.y = 10
                         }
 
-                        
-                        circle.y += circle.vy
+                        else{
+                            circle.y += circle.vy/5
+                        }
                     }
 
                 },1000 / this.framesPerSecond)
