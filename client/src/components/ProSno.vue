@@ -12,12 +12,14 @@ export default {
         return {
         ctx: null,
         framesPerSecond : 30,
-        x: 0,
-        y: 0,
+        x: 50,
+        y: 100,
         r: 10,
         vx: 10,
         vy: 9,
         color: 125,
+        width: 300,
+        height: 200,
         }
     },
             methods: {
@@ -29,17 +31,16 @@ export default {
                     ctx.fillStyle = '#c4bead';
                     ctx.fillRect(0,125,300,25);
 
-                    var snowY = 0;
-                    for( var i = 0; i <= 100; i++){
+                    
+                    for( var i = 0; i < 1; i++){
                         ctx.fillStyle = '#c4bead';
                         ctx.beginPath();
-                        ctx.arc(25, snowY + i, 10, 0 ,2*Math.PI);
+                        ctx.arc(this.x, this.y, this.r, 0 ,2*Math.PI);
                         ctx.fill();
                         
-                        ctx.fillStyle = '#a9b1c4';
-                        ctx.beginPath();
-                        ctx.arc(25, snowY + i, 10, 0 ,2*Math.PI);
-                        ctx.fill();
+                        if (this.x - this.r + this.vx > this.width || this.x + this.r + this.vx > this.width){
+                            this.vx -= this.vx
+                        }
                     }
 
                 },1000 / this.framesPerSecond)
