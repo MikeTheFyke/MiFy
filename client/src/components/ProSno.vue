@@ -12,6 +12,12 @@ export default {
         return {
         ctx: null,
         framesPerSecond : 30,
+        x: 0,
+        y: 0,
+        r: 10,
+        vx: 10,
+        vy: 9,
+        color: 125,
         }
     },
             methods: {
