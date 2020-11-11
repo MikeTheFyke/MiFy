@@ -16,32 +16,22 @@ export default {
     },
             methods: {
             snowing(ctx){
-                var max = 300;
-                var min = 0;
                 var container = { 
                      x: 0,
                      y: 0,
                      width: 300,
                      height: 200,
                 }
-                // var circle = {
-                //     x: Math.floor(Math.random() * (max - min + 1) + min),
-                //     y: 10,
-                //     r: 10,
-                //     vx: 10,
-                //     vy: 9,
-                // }
                 var circles = []
                 for (var j = 0; j <= 50; j++){
                     circles.push ({
-                                x: Math.floor(Math.random() * (max - min + 1) + min),
+                                x: Math.floor(Math.random() * (300 - 0 + 1) + 0),
                                 y: 10,
                                 r: Math.floor(Math.random() * (6 - 1 + 1) + 1),
                                 vx: 10,
                                 vy: 0,
                                 speed: Math.floor(Math.random() * (5 - 2 + 1) + 2),
                     })
-                    console.log(circles)
                 }
                 setInterval (function() {
                     ctx.fillStyle = '#a9b1c4';
@@ -55,18 +45,15 @@ export default {
                         ctx.fillStyle = '#c4bead';
                         ctx.beginPath();
                         ctx.arc(circles[i].x, circles[i].y, circles[i].r, 0 ,2*Math.PI, true);
-                        ctx.fill();
-                        
-                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 50){
+                        ctx.fill(); 
+                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 50) {
                             circles[i].y = circles[i].vy
                             circles[i].speed = Math.random() * (5 - 1 + 1) + 1
                         }
-
-                        else{
+                        else { 
                             circles[i].y += circles[i].speed
                         }
                     }
-
                 },1000 / this.framesPerSecond)
             }
         },
