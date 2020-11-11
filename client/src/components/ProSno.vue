@@ -24,12 +24,23 @@ export default {
                      width: 300,
                      height: 200,
                 }
-                var circle ={
+                var circle = {
                     x: Math.floor(Math.random() * (max - min + 1) + min),
                     y: 10,
                     r: 10,
                     vx: 10,
                     vy: 9,
+                }
+                var circles = []
+                for (var j = 0; j <= 20; j++){
+                    circles.push ({
+                                x: Math.floor(Math.random() * (max - min + 1) + min),
+                                y: 10,
+                                r: 10,
+                                vx: 10,
+                                vy: 9,
+                    })
+                    console.log(circles)
                 }
                 setInterval (function() {
                     ctx.fillStyle = '#a9b1c4';
