@@ -12,41 +12,48 @@ export default {
         return {
         ctx: null,
         framesPerSecond : 30,
-        x: 50,
-        y: 100,
-        r: 10,
-        vx: 10,
-        vy: 9,
-        color: 125,
-        width: 300,
-        height: 200,
         }
     },
             methods: {
             snowing(ctx){
+                var container = { 
+                     x: 0,
+                     y: 0,
+                     width: 300,
+                     height: 200,
+                }
+                var circle ={
+                 x: 50,
+                 y: 100,
+                 r: 10,
+                 vx: 10,
+                 vy: 9,
+                }
                 setInterval (function() {
                     ctx.fillStyle = '#a9b1c4';
-                    ctx.fillRect(0,0,300,150);
+                    ctx.fillRect(0, 0, 300,150);
                 
                     ctx.fillStyle = '#c4bead';
-                    ctx.fillRect(0,125,300,25);
+                    ctx.fillRect(0 ,125,300,25);
 
                     
                     for( var i = 0; i < 1; i++){
                         ctx.fillStyle = '#c4bead';
                         ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.r, 0 ,2*Math.PI);
+                        ctx.arc(circle.x, circle.y, circle.r, 0 ,2*Math.PI, true);
                         ctx.fill();
                         
-                        if (this.x - this.r + this.vx > this.width || this.x + this.r + this.vx > this.width){
-                            this.vx -= this.vx
+                        if (circle.x - circle.r + circle.vx > container.x || 
+                            circle.x + circle.r + circle.vx > container.x + container.width){
+                            circle.vx = -circle.vx
                         }
-                        if (this.y + this.r + this.vy > this.height || this.y - this.r + this.vy < this.height){
-                            this.vy -= this.vy
+                        if (circle.y + circle.r + circle.vy > container.y + container.height || 
+                            circle.y - circle.r + circle.vy < container.y){
+                            circle.vy = -circle.vy
                         }
 
-                        this.x += this.vx
-                        this.y += this.vy
+                        circle.x += circle.vx
+                        circle.y += circle.vy
                     }
 
                 },1000 / this.framesPerSecond)
