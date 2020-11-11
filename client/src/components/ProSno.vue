@@ -24,19 +24,19 @@ export default {
                      width: 300,
                      height: 200,
                 }
-                var circle = {
-                    x: Math.floor(Math.random() * (max - min + 1) + min),
-                    y: 10,
-                    r: 10,
-                    vx: 10,
-                    vy: 9,
-                }
+                // var circle = {
+                //     x: Math.floor(Math.random() * (max - min + 1) + min),
+                //     y: 10,
+                //     r: 10,
+                //     vx: 10,
+                //     vy: 9,
+                // }
                 var circles = []
                 for (var j = 0; j <= 20; j++){
                     circles.push ({
                                 x: Math.floor(Math.random() * (max - min + 1) + min),
                                 y: 10,
-                                r: 10,
+                                r: Math.floor(Math.random() * (10 - 1 + 1) + 1),
                                 vx: 10,
                                 vy: 9,
                     })
@@ -50,19 +50,19 @@ export default {
                     ctx.fillRect(0 ,125,300,25);
 
                     
-                    for( var i = 0; i < 1; i++){
+                    for( var i = 0; i < circles.length; i++){
                         ctx.fillStyle = '#c4bead';
                         ctx.beginPath();
-                        ctx.arc(circle.x, circle.y, circle.r, 0 ,2*Math.PI, true);
+                        ctx.arc(circles[i].x, circles[i].y, circles[i].r, 0 ,2*Math.PI, true);
                         ctx.fill();
                         
-                        if (circle.y + circle.r + circle.vy >= container.height - 50 || 
-                            circle.y - circle.r + circle.vy < container.y){
-                            circle.y = 10
+                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 50 || 
+                            circles[i].y - circles[i].r + circles[i].vy < container.y){
+                            circles[i].y = 10
                         }
 
                         else{
-                            circle.y += circle.vy/5
+                            circles[i].y += circles[i].vy/5
                         }
                     }
 
