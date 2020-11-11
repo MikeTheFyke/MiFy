@@ -33,6 +33,7 @@ export default {
                                 speed: Math.floor(Math.random() * (5 - 2 + 1) + 2),
                     })
                 }
+                
                 setInterval (function() {
                     ctx.fillStyle = '#a9b1c4';
                     ctx.fillRect(0, 0, 300,150);
@@ -48,7 +49,7 @@ export default {
                         ctx.arc(circles[i].x, circles[i].y, circles[i].r, 0 ,2*Math.PI, true);
                         ctx.fill(); 
 
-                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 25) {
+                        if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 15) {
                             circles[i].y = circles[i].vy
                             circles[i].speed = Math.random() * (5 - 1 + 1) + 1
                         }
@@ -75,8 +76,8 @@ export default {
     top: 100px;
     margin-left: 25%;
     background-color: #20203a;
-    width: 300px;
-    height: 150px;
+    width: 50%;
+    height: 40%;
     text-align: center;
 }
 
