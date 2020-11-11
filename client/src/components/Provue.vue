@@ -2,10 +2,7 @@
     <div id="Process-Container">
       <div id=TitleContainer>
         <h1 id="ProTitle">Processing</h1>
-      </div>
-        <div>
-
-        </div>  
+      </div> 
         <ProSno />
     </div>
 </template>
