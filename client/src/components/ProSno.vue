@@ -40,13 +40,14 @@ export default {
                     ctx.fillStyle = '#c4bead';
                     ctx.fillRect(0 ,125,300,25);
 
-                    
+                    console.log("Snowing width = " + container.width)
+                    console.log("Snowing height = " + container.height)
                     for( var i = 0; i < circles.length; i++){
                         ctx.fillStyle = '#c4bead';
                         ctx.beginPath();
                         ctx.arc(circles[i].x, circles[i].y, circles[i].r, 0 ,2*Math.PI, true);
                         ctx.fill(); 
-                        console.log(container.width)
+
                         if (circles[i].y + circles[i].r + circles[i].vy >= container.height - 25) {
                             circles[i].y = circles[i].vy
                             circles[i].speed = Math.random() * (5 - 1 + 1) + 1
@@ -75,14 +76,13 @@ export default {
     margin-left: 25%;
     background-color: #20203a;
     width: 300px;
-    height: 200px;
+    height: 150px;
     text-align: center;
 }
 
 #snowing-canvas{
-    width: 150px;
-    height: 100px;
-    margin-top: 50px;
+    width: 100%;
+    height: 100%;
 }
 
 </style>
