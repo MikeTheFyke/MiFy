@@ -1,5 +1,5 @@
 <template>
-    <div id=" GreenSno-Container">
+    <div id=" GreenSnoBall-Container">
 
     </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 // import gsap from "gsap"
 export default {
-  name: 'GreenSno',
+  name: 'GreenSnoBall',
     data(){
         return{
 
@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 
-#GreenSho-Contianer{
+#GreenShoBall-Contianer{
     position: absolute;
     top: 100px;
     margin-left: 25%;

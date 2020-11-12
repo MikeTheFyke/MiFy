@@ -2,16 +2,16 @@
     <div id="Green-Container">
 
     <h1 id="GreenTitle">GSAP</h1>
-    <GreenSno />
+    <GreenSnoBall />
     </div>
 </template>
 
 <script>
-import GreenSno from './GreenSno'
+import GreenSnoBall from './GreenSnoBall'
 export default {
   name: 'Greenvue',
     components: {
-      GreenSno : GreenSno,
+      GreenSnoBall : GreenSnoBall,
   },
   data () {
     return {
@@ -27,7 +27,7 @@ export default {
     left: 100vw;
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-color: white;
     opacity: 0;
 }
 
