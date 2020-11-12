@@ -18,20 +18,20 @@ export default {
     },
             methods: {
             
-            BallMove(){
-                document.getElementById("snowing-canvas").addEventListener("click", function(e){
-                    this.mouseX = e.clientX;
-                    this.mouseY = e.clientY;
-                    console.log("mouse location:", this.mouseX, this.mouseY)
-                    console.log("Clicked")
-                    
-                    this.ballCenterX = ((document.getElementById('SnoFlakes-Container').clientWidth / 4) + (document.getElementById('SnoFlakes-Container').clientWidth/2) - 40) + (document.getElementById('SnoFlakes-Container').clientWidth * 0.67);
-                    this.ballCenterY = ((document.getElementById('SnoFlakes-Container').clientHeight * 0.87) - 35) + 100;
-                    console.log("BallCenterX = " + this.ballCenterX)
-                    console.log("BallCenterY = " + this.ballCenterY)
-                
-                });
-            },
+            // BallMove(){
+            //     document.getElementById("snowing-canvas").addEventListener("click", function(e){
+            //         this.mouseX = e.clientX;
+            //         this.mouseY = e.clientY;
+            //         console.log("mouse location:", this.mouseX, this.mouseY)
+            //         console.log("Clicked")
+            //         console.log(this.mouseY - 100)
+            //         this.ballCenterX = ((document.getElementById('SnoFlakes-Container').clientWidth / 4) + (document.getElementById('SnoFlakes-Container').clientWidth/2) - 40) + (document.getElementById('SnoFlakes-Container').clientWidth * 0.67);
+            //         this.ballCenterY = this.mouseY - 105;
+            //         console.log("BallCenterX = " + this.ballCenterX)
+            //         console.log("BallCenterY = " + this.ballCenterY)
+
+            //     });
+            // },
 
             snowing(ctx){
                 var container = { 
@@ -52,11 +52,25 @@ export default {
                     })
                 }
                 var ball = {
-                    ballX: container.width - 40,
-                    ballY: container.height - 35,
+                    ballCenterX: container.width - 40,
+                    ballCenterY: container.height - 35,
                     ballR: 10,
                 }
+
                 setInterval (function() {
+
+                                    document.getElementById("snowing-canvas").addEventListener("click", function(e){
+                    ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
+                    this.mouseY = e.clientY;
+                    // console.log("mouse location:", this.mouseX, this.mouseY)
+                    // console.log("Clicked")
+                    // console.log(this.mouseY - 100)
+                    // ball.ballCenterX = this.mouseX - (document.getElementById('SnoFlakes-Container').clientWidth / 4 ) - 80;
+                    // ball.ballCenterY = this.mouseY - 105;
+                    // console.log("BallCenterX = " + ball.ballCenterX)
+                    // console.log("BallCenterY = " + ball.ballCenterY)
+                    // console.log(ball.ballCenterX)
+                });
                     ctx.fillStyle = '#a9b1c4';
                     ctx.fillRect(0, 0, 300,150);
                 
@@ -66,7 +80,7 @@ export default {
                     // SnowBall01
                     ctx.fillStyle = '#c4bead';
                     ctx.beginPath();
-                    ctx.arc(ball.ballX, ball.ballY, ball.ballR, 0 ,2*Math.PI, true);
+                    ctx.arc(ball.ballCenterX, ball.ballCenterY, ball.ballR, 0 ,2*Math.PI, true);
                     ctx.fill(); 
                     //
 
@@ -90,9 +104,11 @@ export default {
         mounted () {
             
                 this.ctx = document.getElementById('snowing-canvas').getContext('2d');
+                
+                
                 this.snowing(this.ctx);
 
-                document.getElementById("snowing-canvas").addEventListener("click", this.BallMove(this.e))
+                // document.getElementById("snowing-canvas").addEventListener("click", this.BallMove(this.e, this.ctx))
         }
 }
 </script>
