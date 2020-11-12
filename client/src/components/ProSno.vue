@@ -62,6 +62,8 @@ export default {
                                     document.getElementById("snowing-canvas").addEventListener("click", function(e){
                     ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
                     this.mouseY = e.clientY;
+                    console.log("Client Width = " + document.getElementById('SnoFlakes-Container').clientWidth)
+                    console.log("Canvas Width = " + document.getElementById('snowing-canvas').width)
                     // console.log("mouse location:", this.mouseX, this.mouseY)
                     // console.log("Clicked")
                     // console.log(this.mouseY - 100)
