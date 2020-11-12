@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 #GreenShoBall-Contianer{
     position: absolute;
@@ -32,14 +32,18 @@ export default {
     width: 100%;
     height: 40%;
     text-align: center;
+    z-Index: 5;
 }
 
 #SnoBall{
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #c4bead;
+    background-color: red;
+    margin-top: 200px;
     margin-left: 65%;
 }
+
+/* #c4bead; */
 
 </style>

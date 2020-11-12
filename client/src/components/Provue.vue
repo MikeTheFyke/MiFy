@@ -4,19 +4,16 @@
         <h1 id="ProTitle">Processing</h1>
       </div> 
         <ProSno />
-        <GreenSnoBall />
     </div>
 </template>
 
 <script>
 import ProSno from './ProSno.vue'
-import GreenSnoBall from './GreenSnoBall.vue'
 
 export default {
   name: 'Provue',
   components: {
     ProSno: ProSno,
-    GreenSnoBall: GreenSnoBall,
   },
   data () {
     return {
@@ -34,7 +31,6 @@ export default {
     width: 100vw;
     height: 100vh;
     background-color: white;
-    opacity: 0;
 }
 
 #TitleContainer{

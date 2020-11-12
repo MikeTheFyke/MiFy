@@ -1,6 +1,15 @@
 <template>
-    <div id="SnoFlakes-Container">
-        <canvas id="snowing-canvas"></canvas>
+    <div>
+        <div id="SnoFlakes-Container">
+            <canvas id="snowing-canvas"></canvas>
+            <div id="GreenSnoBall-Container">
+                    <div id="SnoBall"></div>
+            </div>
+        </div>
+
+        <!-- <div id=" GreenSnoBall-Container">
+            <div id="SnoBall"></div>
+        </div> -->
     </div>
 </template>
 
@@ -120,6 +129,7 @@ export default {
 #SnoFlakes-Container{
     position: absolute;
     top: 100px;
+    left: 0px;
     margin-left: 25%;
     background-color: #20203a;
     width: 50%;
@@ -132,4 +142,20 @@ export default {
     height: 100%;
 }
 
+#GreenSnoBall-Container{
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+#SnoBall{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: red;
+    margin: 0px;
+}
 </style>
