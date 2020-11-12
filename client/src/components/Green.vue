@@ -2,15 +2,17 @@
     <div id="Green-Container">
 
     <h1 id="GreenTitle">GSAP</h1>
-
+    <GreenSno />
     </div>
 </template>
 
 <script>
-
-
+import GreenSno from './GreenSno'
 export default {
   name: 'Greenvue',
+    components: {
+      GreenSno : GreenSno,
+  },
   data () {
     return {
     }
