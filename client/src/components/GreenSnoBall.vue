@@ -1,6 +1,6 @@
 <template>
     <div id=" GreenSnoBall-Container">
-
+        <div id="SnoBall"></div>
     </div>
 </template>
 
@@ -28,11 +28,18 @@ export default {
 #GreenShoBall-Contianer{
     position: absolute;
     top: 100px;
-    margin-left: 25%;
     background-color: #20203a;
-    width: 50%;
+    width: 100%;
     height: 40%;
     text-align: center;
+}
+
+#SnoBall{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #c4bead;
+    margin-left: 65%;
 }
 
 </style>
