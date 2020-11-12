@@ -6,15 +6,11 @@
                     <div id="SnoBall"></div>
             </div>
         </div>
-
-        <!-- <div id=" GreenSnoBall-Container">
-            <div id="SnoBall"></div>
-        </div> -->
     </div>
 </template>
 
 <script>
-// import gsap from "gsap";
+import gsap from "gsap";
 export default {
     name: 'ProSno',
     data() {
@@ -68,7 +64,10 @@ export default {
 
                 setInterval (function() {
 
-                    // document.getElementById("snowing-canvas").addEventListener("click", function(e){
+                    document.getElementById("snowing-canvas").addEventListener("click", function(e){
+
+                        gsap.to('#SnoBall', 5, { x: e.clientX, y: e.cleintY})
+
                     // ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
                     // this.mouseY = e.clientY;
                     // console.log("Client Width = " + document.getElementById('SnoFlakes-Container').clientWidth)
@@ -81,7 +80,7 @@ export default {
                     // console.log("BallCenterX = " + ball.ballCenterX)
                     // console.log("BallCenterY = " + ball.ballCenterY)
                     // console.log(ball.ballCenterX)
-                // });
+                    });
                     ctx.fillStyle = '#a9b1c4';
                     ctx.fillRect(0, 0, 300,150);
                 
@@ -142,16 +141,10 @@ export default {
     height: 100%;
 }
 
-#GreenSnoBall-Container{
+#SnoBall{
     position: absolute;
     top: 100px;
     left: 0px;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-}
-
-#SnoBall{
     width: 10px;
     height: 10px;
     border-radius: 5px;
