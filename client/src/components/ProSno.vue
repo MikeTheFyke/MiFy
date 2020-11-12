@@ -51,19 +51,19 @@ export default {
                                 speed: Math.floor(Math.random() * (5 - 2 + 1) + 2),
                     })
                 }
-                var ball = {
-                    ballCenterX: container.width - 40,
-                    ballCenterY: container.height - 35,
-                    ballR: 10,
-                }
+                // var ball = {
+                //     ballCenterX: container.width - 40,
+                //     ballCenterY: container.height - 35,
+                //     ballR: 10,
+                // }
 
                 setInterval (function() {
 
-                                    document.getElementById("snowing-canvas").addEventListener("click", function(e){
-                    ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
-                    this.mouseY = e.clientY;
-                    console.log("Client Width = " + document.getElementById('SnoFlakes-Container').clientWidth)
-                    console.log("Canvas Width = " + document.getElementById('snowing-canvas').width)
+                    // document.getElementById("snowing-canvas").addEventListener("click", function(e){
+                    // ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
+                    // this.mouseY = e.clientY;
+                    // console.log("Client Width = " + document.getElementById('SnoFlakes-Container').clientWidth)
+                    // console.log("Canvas Width = " + document.getElementById('snowing-canvas').width)
                     // console.log("mouse location:", this.mouseX, this.mouseY)
                     // console.log("Clicked")
                     // console.log(this.mouseY - 100)
@@ -72,7 +72,7 @@ export default {
                     // console.log("BallCenterX = " + ball.ballCenterX)
                     // console.log("BallCenterY = " + ball.ballCenterY)
                     // console.log(ball.ballCenterX)
-                });
+                // });
                     ctx.fillStyle = '#a9b1c4';
                     ctx.fillRect(0, 0, 300,150);
                 
@@ -80,10 +80,10 @@ export default {
                     ctx.fillRect(0 ,125,300,25);
 
                     // SnowBall01
-                    ctx.fillStyle = '#c4bead';
-                    ctx.beginPath();
-                    ctx.arc(ball.ballCenterX, ball.ballCenterY, ball.ballR, 0 ,2*Math.PI, true);
-                    ctx.fill(); 
+                    // ctx.fillStyle = '#c4bead';
+                    // ctx.beginPath();
+                    // ctx.arc(ball.ballCenterX, ball.ballCenterY, ball.ballR, 0 ,2*Math.PI, true);
+                    // ctx.fill(); 
                     //
 
                     for( var i = 0; i < circles.length; i++){
