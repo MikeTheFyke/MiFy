@@ -22,7 +22,8 @@ export default {
 
     },
     mounted (){
-
+        gsap.to("#green-element", 2, { x: '350px', delay: 2})
+        gsap.to("#green-element", 2, { x: 0, delay: 4})
     }
     
 }
@@ -39,7 +40,7 @@ export default {
 
 #green-container2{
     margin: 0px auto;
-    width: 80vw;
+    width: 40vw;
     height: 100%;
 }
 
