@@ -22,8 +22,10 @@ export default {
 
     },
     mounted (){
-        gsap.to("#green-element", 2, { x: '350px', delay: 2})
-        gsap.to("#green-element", 2, { x: 0, delay: 4})
+        // for (var i = 0; i< Infinity; i++){
+            gsap.to("#green-element", 2, { x: '350px', delay: 2, repeat: -1, yoyo: true })
+            // gsap.to("#green-element", 2, { x: 0, delay: 4 })
+        // }
     }
     
 }
