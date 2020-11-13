@@ -120,9 +120,9 @@ export default {
         },
         mounted () {
             
-                this.canvas = document.getElementById('snowing-canvas'); 
-                this.ctx = this.canvas.getContext('2d');
-                this.rect = this.canvas.getBoundingClientRect();
+                // this.canvas = document.getElementById('snowing-canvas'); 
+                this.ctx = document.getElementById('snowing-canvas').getContext('2d');
+                // this.rect = this.canvas.getBoundingClientRect();
                 // this.root = document.documentElement;
                 // this.snowing(this.ctx, this.rect, this.canvas)
                 this.snowing(this.ctx)
