@@ -40,7 +40,7 @@ export default {
             //     });
             // },
 
-            snowing(ctx, rect, root){
+            snowing(ctx, rect){
                 var container = { 
                      x: 0,
                      y: 0,
@@ -66,9 +66,12 @@ export default {
 
                 setInterval (function() {
 
-                    document.getElementById("snowing-canvas").addEventListener("click", function(e){
+                    // var BallCenterX = this.e.clientX - rect.left;
+                    
 
-                        gsap.to('#SnoBall', 0, { x: e.clientX - rect.left - root.scrollLeft, y: (e.clientY - rect.top - root.scrollTop) })
+                    document.getElementById("snowing-canvas").addEventListener("click", function(e){
+                        console.log(Math.floor(e.clientX - rect.left))
+                        gsap.to('#SnoBall', 0, { x: e.clientX - rect.left })
 
                     // ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
                     // this.mouseY = e.clientY;
@@ -118,8 +121,8 @@ export default {
                 this.canvas = document.getElementById('snowing-canvas'); 
                 this.ctx = this.canvas.getContext('2d');
                 this.rect = this.canvas.getBoundingClientRect();
-                this.root = document.documentElement;
-                this.snowing(this.ctx, this.rect, this.root);
+                // this.root = document.documentElement;
+                this.snowing(this.ctx, this.rect, this.canvas)
 
                 // document.getElementById("snowing-canvas").addEventListener("click", this.BallMove(this.e, this.ctx))
         }
