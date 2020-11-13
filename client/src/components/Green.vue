@@ -4,17 +4,17 @@
         <h1 id="GreenTitle">GSAP</h1>
       </div>
     <ProSno />
-    <GreenSnoBall />
+    <!-- <GreenSnoBall /> -->
     </div>
 </template>
 
 <script>
-import GreenSnoBall from './GreenSnoBall'
+// import GreenSnoBall from './GreenSnoBall'
 import ProSno from './ProSno'
 export default {
   name: 'Greenvue',
     components: {
-      GreenSnoBall : GreenSnoBall,
+      // GreenSnoBall : GreenSnoBall,
       ProSno : ProSno,
   },
   data () {

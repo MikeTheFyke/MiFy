@@ -2,9 +2,9 @@
     <div>
         <div id="SnoFlakes-Container">
             <canvas id="snowing-canvas"></canvas>
-            <div id="GreenSnoBall-Container">
+            <!-- <div id="GreenSnoBall-Container">
                     <div id="SnoBall"></div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
