@@ -2,7 +2,7 @@
     <div>
         <div id="green-container">
             <div id="green-container2">
-                <divid="green-element"></div>
+                <div id="green-element"></div>
             </div>
         </div>
     </div>    
@@ -29,5 +29,26 @@ export default {
 </script>
 
 <style scoped>
+
+#green-container{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 200px;
+}
+
+#green-container2{
+    margin: 0px auto;
+    width: 80vw;
+    height: 100%;
+}
+
+
+#green-element{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #f20000;;
+}
 
 </style>
