@@ -70,7 +70,8 @@ export default {
                     
 
                     document.getElementById("snowing-canvas").addEventListener("click", function(e){
-                        console.log(Math.floor(e.clientX - rect.left))
+                        console.log("X " + Math.floor(e.clientX - rect.left))
+                        console.log("Y " + Math.floor(e.clientY - rect.top))
                         gsap.to('#SnoBall', 0, { x: e.clientX - rect.left })
 
                     // ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
@@ -139,7 +140,6 @@ export default {
     background-color: #20203a;
     width: 50%;
     height: 40%;
-    text-align: center;
 }
 
 #snowing-canvas{
@@ -147,9 +147,18 @@ export default {
     height: 100%;
 }
 
+#GreenSnoBall-Container{
+    position: absolute;
+    top: 0px;
+    left: -45%;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
 #SnoBall{
     position: absolute;
-    top: 100px;
+    top: 0px;
     left: 0px;
     width: 10px;
     height: 10px;
