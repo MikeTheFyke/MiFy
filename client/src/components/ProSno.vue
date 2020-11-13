@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import gsap from "gsap";
+// import gsap from "gsap";
 export default {
     name: 'ProSno',
     data() {
@@ -20,7 +20,7 @@ export default {
         mouseX: null,
         mouseY: null,
         canvas: null,
-        rect: null,
+        // rect: null,
         }
     },
             methods: {
@@ -40,7 +40,8 @@ export default {
             //     });
             // },
 
-            snowing(ctx, rect){
+            // snowing(ctx, rect){
+                snowing(ctx){
                 var container = { 
                      x: 0,
                      y: 0,
@@ -69,10 +70,10 @@ export default {
                     // var BallCenterX = this.e.clientX - rect.left;
                     
 
-                    document.getElementById("snowing-canvas").addEventListener("click", function(e){
-                        console.log("X " + Math.floor(e.clientX - rect.left))
-                        console.log("Y " + Math.floor(e.clientY - rect.top))
-                        gsap.to('#SnoBall', 0, { x: e.clientX - rect.left })
+                    // document.getElementById("snowing-canvas").addEventListener("click", function(e){
+                    //     console.log("X " + Math.floor(e.clientX - rect.left))
+                    //     console.log("Y " + Math.floor(e.clientY - rect.top))
+                    //     gsap.to('#SnoBall', 0, { x: e.clientX - rect.left })
 
                     // ball.ballCenterX = e.clientX - (window.innerWidth / 4 ) ;
                     // this.mouseY = e.clientY;
@@ -86,7 +87,7 @@ export default {
                     // console.log("BallCenterX = " + ball.ballCenterX)
                     // console.log("BallCenterY = " + ball.ballCenterY)
                     // console.log(ball.ballCenterX)
-                    });
+                    // });
                     ctx.fillStyle = '#a9b1c4';
                     ctx.fillRect(0, 0, 300,150);
                 
@@ -123,7 +124,8 @@ export default {
                 this.ctx = this.canvas.getContext('2d');
                 this.rect = this.canvas.getBoundingClientRect();
                 // this.root = document.documentElement;
-                this.snowing(this.ctx, this.rect, this.canvas)
+                // this.snowing(this.ctx, this.rect, this.canvas)
+                this.snowing(this.ctx)
 
                 // document.getElementById("snowing-canvas").addEventListener("click", this.BallMove(this.e, this.ctx))
         }
