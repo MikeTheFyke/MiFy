@@ -31,9 +31,11 @@ export default {
             gsap.to("#green-element", {
                 motionPath: {
                     path:[ {x: 200, y:150},
-                           {x: 500, y:150}],
+                           {x: 500, y:0},
+                         ],
                            curviness:1
                 },
+                scale: 1.5,
                 duration: 2,
                 repeat: -1,
                 yoyo: true
