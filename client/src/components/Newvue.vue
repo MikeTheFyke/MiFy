@@ -10,6 +10,9 @@
 
 <script>
 import gsap from "gsap";
+import motionPath from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(motionPath)
 
 export default {
     name: 'Newvue',
@@ -23,7 +26,18 @@ export default {
     },
     mounted (){
         // for (var i = 0; i< Infinity; i++){
-            gsap.to("#green-element", 2, { x: '350px', delay: 2, repeat: -1, yoyo: true })
+            // gsap.to("#green-element", 2, { x: '350px', delay: 2, repeat: -1, yoyo: true })
+            // gsap.registerPlugin(MotionPathPlugin)
+            gsap.to("#green-element", {
+                motionPath: {
+                    path:[ {x: 200, y:150},
+                           {x: 500, y:150}],
+                           curviness:1
+                },
+                duration: 2,
+                repeat: -1,
+                yoyo: true
+            })
             // gsap.to("#green-element", 2, { x: 0, delay: 4 })
         // }
     }
