@@ -3,6 +3,8 @@
         <div id="green-container">
             <div id="green-container2">
                 <div id="green-element"></div>
+                <div id="green-element3"></div>
+                <div id="green-element2"></div>
             </div>
         </div>
     </div>    
@@ -25,25 +27,37 @@ export default {
 
     },
     mounted (){
-        // for (var i = 0; i< Infinity; i++){
-            // gsap.to("#green-element", 2, { x: '350px', delay: 2, repeat: -1, yoyo: true })
-            // gsap.registerPlugin(MotionPathPlugin)
-            gsap.to("#green-element", {
-                motionPath: {
-                    path:[ {x: 200, y:150},
-                           {x: 500, y:0},
-                         ],
-                           curviness:1
-                },
-                scale: 1.5,
-                duration: 2,
-                repeat: -1,
-                yoyo: true
-            })
-            // gsap.to("#green-element", 2, { x: 0, delay: 4 })
-        // }
+            function go(){
+                gsap.to("#green-element", {
+                    motionPath: {
+                        path:[ { x: 200, y:150 },
+                               { x: 500, y:0 }
+                            ],
+                            curviness:1
+                    },
+                    scale: 1.5,
+                    duration: 2,
+                    repeat: -1,
+                    yoyo: true
+                })
+                gsap.to("#green-element2", {
+                    motionPath: {
+                        path:[ { x: 200, y: 50},
+                               { x: 400, y:0 },
+                               { x: 200, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5,
+                repeat: -1, 
+                })
+
+
+                gsap.to("#green-element3", 1, { scaleX: 0, repeat: -1, yoyo: true, delay: 0.25})
+            }
+            go()
     }
-    
 }
 </script>
 
@@ -67,7 +81,26 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    background-color: #f20000;;
+    background-color: #f20000;
 }
 
+#green-element2{
+    position: absolute;
+    top: 0px;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #20203a;
+}
+
+#green-element3{
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #7a84bf;
+}
 </style>
