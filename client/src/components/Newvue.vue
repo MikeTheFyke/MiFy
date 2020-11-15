@@ -115,10 +115,10 @@ export default {
     position: absolute;
     top: 0px;
     left: 30%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    background-color: #20203a;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #c7bf2e;
 }
 
 #alpha-element{
