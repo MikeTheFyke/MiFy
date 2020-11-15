@@ -111,7 +111,7 @@ export default {
 #terra-container{
     position: absolute;
     top: 0px;
-    left: 45%;
+    left: 20%;
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -119,11 +119,19 @@ export default {
 }
 
 #terra{
-
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #4f64e0;
 }
 
 #terra-beta{
-
+    position: relative;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #bcc0d6;
 }
 
 </style>
