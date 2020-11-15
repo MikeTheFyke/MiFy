@@ -128,10 +128,7 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    border-color: salmon;
-    border-style: solid;
-    border-width: 5px;
-    background-color: yellow;
+    background-image: linear-gradient(red, yellow);
 }
 
 #terra-container{
