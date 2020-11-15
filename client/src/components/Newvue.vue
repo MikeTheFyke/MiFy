@@ -3,7 +3,7 @@
         <div id="green-container">
             <div id="green-container2">
                 <div id="green-element"></div>
-                <div id="green-element3"></div>
+                <div id="alpha-element"></div>
                 <div id="green-element2"></div>
                 <div id="terra-container">
                     <div id="terra-beta"></div>
@@ -81,7 +81,7 @@ export default {
                 repeat: -1, 
                 })
 
-                gsap.to("#green-element3", 1, { scaleX: 0, repeat: -1, yoyo: true, delay: 0.25})
+                gsap.to("#alpha-element", 1, { scaleX: 0, repeat: -1, yoyo: true, delay: 0.25})
             }
             go()
     }
@@ -121,14 +121,17 @@ export default {
     background-color: #20203a;
 }
 
-#green-element3{
+#alpha-element{
     position: absolute;
     top: 0px;
     left: 45%;
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    background-color: #7a84bf;
+    border-color: salmon;
+    border-style: solid;
+    border-width: 5px;
+    background-color: yellow;
 }
 
 #terra-container{
