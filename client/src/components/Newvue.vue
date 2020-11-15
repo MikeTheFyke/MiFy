@@ -70,6 +70,19 @@ export default {
                 repeat: -1, 
                 })
 
+                                gsap.to("#terra-beta", {
+                    motionPath: {
+                        path:[ { x: 10, y: 50},
+                               { x: 20, y:0 },
+                               { x: 10, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 2,
+                repeat: -1, 
+                })
+
                 gsap.to("#green-element3", 1, { scaleX: 0, repeat: -1, yoyo: true, delay: 0.25})
             }
             go()
