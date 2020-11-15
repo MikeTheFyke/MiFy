@@ -109,6 +109,21 @@ export default {
 }
 
 #terra-container{
-    
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: transparent;
 }
+
+#terra{
+
+}
+
+#terra-beta{
+
+}
+
 </style>
