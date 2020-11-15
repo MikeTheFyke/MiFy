@@ -5,6 +5,10 @@
                 <div id="green-element"></div>
                 <div id="green-element3"></div>
                 <div id="green-element2"></div>
+                <div id="terra-container">
+                    <div id="terra"></div>
+                    <div id="terra-beta"></div>
+                </div>
             </div>
         </div>
     </div>    
@@ -102,5 +106,9 @@ export default {
     height: 100px;
     border-radius: 50px;
     background-color: #7a84bf;
+}
+
+#terra-container{
+    
 }
 </style>
