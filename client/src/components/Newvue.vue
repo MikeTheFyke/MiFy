@@ -6,8 +6,8 @@
                 <div id="green-element3"></div>
                 <div id="green-element2"></div>
                 <div id="terra-container">
-                    <div id="terra"></div>
                     <div id="terra-beta"></div>
+                    <div id="terra"></div>
                 </div>
             </div>
         </div>
@@ -57,6 +57,18 @@ export default {
                 repeat: -1, 
                 })
 
+                gsap.to("#terra-container", {
+                    motionPath: {
+                        path:[ { x: 300, y: 50},
+                               { x: 600, y:0 },
+                               { x: 300, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5,
+                repeat: -1, 
+                })
 
                 gsap.to("#green-element3", 1, { scaleX: 0, repeat: -1, yoyo: true, delay: 0.25})
             }
