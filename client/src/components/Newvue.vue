@@ -2,9 +2,9 @@
     <div>
         <div id="green-container">
             <div id="green-container2">
-                <div id="green-element"></div>
+                <div id="mars-element"></div>
                 <div id="alpha-element"></div>
-                <div id="green-element2"></div>
+                <div id="venus-element"></div>
                 <div id="terra-container">
                     <div id="terra-beta"></div>
                     <div id="terra"></div>
@@ -32,19 +32,19 @@ export default {
     },
     mounted (){
             function go(){
-                gsap.to("#green-element", {
+                gsap.to("#mars-element", {
                     motionPath: {
                         path:[ { x: 200, y:150 },
                                { x: 500, y:0 }
                             ],
                             curviness:1
                     },
-                    scale: 1.5,
+                    // scale: 1.5,
                     duration: 2,
                     repeat: -1,
                     yoyo: true
                 })
-                gsap.to("#green-element2", {
+                gsap.to("#venus-element", {
                     motionPath: {
                         path:[ { x: 200, y: 50},
                                { x: 400, y:0 },
@@ -104,14 +104,14 @@ export default {
 }
 
 
-#green-element{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+#mars-element{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
     background-color: #f20000;
 }
 
-#green-element2{
+#venus-element{
     position: absolute;
     top: 0px;
     left: 30%;
