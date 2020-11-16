@@ -45,6 +45,19 @@ export default {
                     repeat: -1,
                     yoyo: true
                 })
+                gsap.to("#mercury-element", {
+                    motionPath: {
+                        path:[ { x: 150, y: 50},
+                               { x: 300, y:0 },
+                               { x: 150, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5,
+                repeat: -1, 
+                })
+
                 gsap.to("#venus-element", {
                     motionPath: {
                         path:[ { x: 200, y: 50},
@@ -71,7 +84,7 @@ export default {
                 repeat: -1, 
                 })
 
-                                gsap.to("#terra-beta", {
+                gsap.to("#terra-beta", {
                     motionPath: {
                         path:[ { x: 100},
                                { x: 0 },
