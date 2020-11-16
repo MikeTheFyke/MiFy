@@ -3,6 +3,8 @@
         <div id="green-container">
             <div id="green-container2">
                 <div id="mars-element"></div>
+                <div id="mars-phobos"></div>
+                <div id="mars-deimos"></div>
                 <div id="alpha-element"></div>
                 <div id="mercury-element"></div>
                 <div id="venus-element"></div>
