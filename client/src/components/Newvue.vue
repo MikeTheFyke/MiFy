@@ -33,18 +33,32 @@ export default {
     },
     mounted (){
             function go(){
+                // gsap.to("#mars-element", {
+                //     motionPath: {
+                //         path:[ { x: 200, y:150 },
+                //                { x: 500, y:0 }
+                //             ],
+                //             curviness:1
+                //     },
+                //     // scale: 1.5,
+                //     duration: 2,
+                //     repeat: -1,
+                //     yoyo: true
+                // })
+
                 gsap.to("#mars-element", {
                     motionPath: {
-                        path:[ { x: 200, y:150 },
-                               { x: 500, y:0 }
-                            ],
-                            curviness:1
-                    },
-                    // scale: 1.5,
-                    duration: 2,
-                    repeat: -1,
-                    yoyo: true
+                        path:[ { x: 300, y: 50},
+                               { x: 600, y:0 },
+                               { x: 300, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5,
+                repeat: -1, 
                 })
+
                 gsap.to("#mercury-element", {
                     motionPath: {
                         path:[ { x: 150, y: 50},
