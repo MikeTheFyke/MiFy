@@ -4,6 +4,7 @@
             <div id="green-container2">
                 <div id="mars-element"></div>
                 <div id="alpha-element"></div>
+                <div id="mercury-element"></div>
                 <div id="venus-element"></div>
                 <div id="terra-container">
                     <div id="terra-beta"></div>
@@ -109,6 +110,16 @@ export default {
     height: 40px;
     border-radius: 20px;
     background-color: #f20000;
+}
+
+#mercury-element{
+    position: absolute;
+    top: 0px;
+    left: 35%;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #bfbeac;
 }
 
 #venus-element{
