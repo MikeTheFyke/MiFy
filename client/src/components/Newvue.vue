@@ -105,9 +105,9 @@ export default {
 
 
 #mars-element{
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
     background-color: #f20000;
 }
 
