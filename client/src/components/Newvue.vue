@@ -142,9 +142,9 @@ export default {
 }
 
 #terra{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
     background-color: #4f64e0;
 }
 
