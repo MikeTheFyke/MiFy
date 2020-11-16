@@ -10,6 +10,8 @@
                     <div id="terra-beta"></div>
                     <div id="terra"></div>
                 </div>
+                <div id="saturn"></div>
+                <div id="jupiter"></div>
             </div>
         </div>
     </div>    
