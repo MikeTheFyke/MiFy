@@ -99,7 +99,7 @@ export default {
 
 #green-container2{
     margin: 0px auto;
-    width: 40vw;
+    width: 20vw;
     height: 100%;
 }
 
