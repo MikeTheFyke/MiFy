@@ -151,9 +151,9 @@ export default {
 #terra-beta{
     position: relative;
     top: 0px;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
     background-color: #bcc0d6;
 }
 
