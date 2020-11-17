@@ -3,9 +3,9 @@
         <div id="green-container">
             <div id="green-container2">
                 <div id="mars-container">
-                    <div id="mars-element"></div>
                     <div id="mars-phobos"></div>
                     <div id="mars-deimos"></div>
+                    <div id="mars-element"></div>
                 </div>
                 <div id="alpha-element"></div>
                 <div id="mercury-element"></div>
