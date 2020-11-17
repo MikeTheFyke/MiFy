@@ -2,9 +2,11 @@
     <div>
         <div id="green-container">
             <div id="green-container2">
-                <div id="mars-element"></div>
-                <div id="mars-phobos"></div>
-                <div id="mars-deimos"></div>
+                <div id="mars-container">
+                    <div id="mars-element"></div>
+                    <div id="mars-phobos"></div>
+                    <div id="mars-deimos"></div>
+                </div>
                 <div id="alpha-element"></div>
                 <div id="mercury-element"></div>
                 <div id="venus-element"></div>
@@ -53,7 +55,7 @@ export default {
                 //     yoyo: true
                 // })
 
-                gsap.to("#mars-element", {
+                gsap.to("#mars-container", {
                     motionPath: {
                         path:[ { x: 350, y: 50},
                                { x: 755, y:0 },
@@ -138,11 +140,13 @@ export default {
     height: 100%;
 }
 
-
-#mars-element{
+#mars-container{
     position: absolute;
     top: 0px;
     left: 15%;
+}
+
+#mars-element{
     width: 40px;
     height: 40px;
     border-radius: 20px;
