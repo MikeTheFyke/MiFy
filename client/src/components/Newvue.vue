@@ -149,6 +149,14 @@ export default {
     background-color: #f20000;
 }
 
+#mars-phobos{
+    
+}
+
+#mars-deimos{
+
+}
+
 #mercury-element{
     position: absolute;
     top: 0px;
