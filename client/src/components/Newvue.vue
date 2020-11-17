@@ -155,20 +155,20 @@ export default {
 
 #mars-phobos{
     position: relative;
-    top: 0px;
+    top: 20px;
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: grey;
+    background-color: #6b6b63;
 }
 
 #mars-deimos{
     position: relative;
-    top: 0px;
+    top: 30px;
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: grey;
+    background-color: #ababa4;
 }
 
 #mercury-element{
