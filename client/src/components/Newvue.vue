@@ -55,9 +55,9 @@ export default {
 
                 gsap.to("#mars-element", {
                     motionPath: {
-                        path:[ { x: 300, y: 50},
-                               { x: 600, y:0 },
-                               { x: 300, y:-25 },
+                        path:[ { x: 350, y: 50},
+                               { x: 755, y:0 },
+                               { x: 350, y:-25 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
