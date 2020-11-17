@@ -154,6 +154,8 @@ export default {
 }
 
 #mars-phobos{
+    position: relative;
+    top: 0px;
     width: 10px;
     height: 10px;
     border-radius: 5px;
