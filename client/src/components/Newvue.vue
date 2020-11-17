@@ -3,8 +3,8 @@
         <div id="green-container">
             <div id="green-container2">
                 <div id="mars-container">
-                    <div id="mars-phobos"></div>
-                    <div id="mars-deimos"></div>
+                    <div id="mars-phobos" class="mars-beta"></div>
+                    <div id="mars-deimos" class="mars-beta"></div>
                     <div id="mars-element"></div>
                 </div>
                 <div id="alpha-element"></div>
@@ -65,6 +65,17 @@ export default {
                 curviness: 1
                 }, 
                 duration: 5,
+                repeat: -1, 
+                })
+
+                gsap.to(".mars-beta", {
+                    motionPath: {
+                        path:[ { x: 40},
+                               { x: 0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 2,
                 repeat: -1, 
                 })
 
