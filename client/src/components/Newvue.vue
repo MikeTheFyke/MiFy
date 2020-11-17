@@ -150,11 +150,17 @@ export default {
 }
 
 #mars-phobos{
-    
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: grey;
 }
 
 #mars-deimos{
-
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: grey;
 }
 
 #mercury-element{
