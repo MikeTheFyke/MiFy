@@ -109,7 +109,7 @@ export default {
 
                 gsap.to("#terra-beta", {
                     motionPath: {
-                        path:[ { x: 100},
+                        path:[ { x: 40},
                                { x: 0 },
                              ],
                 curviness: 1
