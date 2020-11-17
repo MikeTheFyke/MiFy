@@ -140,6 +140,9 @@ export default {
 
 
 #mars-element{
+    position: absolute;
+    top: 0px;
+    left: 15%;
     width: 40px;
     height: 40px;
     border-radius: 20px;
