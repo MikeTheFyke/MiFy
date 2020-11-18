@@ -94,9 +94,9 @@ export default {
 
                 gsap.to("#venus-element", {
                     motionPath: {
-                        path:[ { x: 200, y: 50},
-                               { x: 400, y:0 },
-                               { x: 200, y:-25 },
+                        path:[ { x: 125, y: 50},
+                               { x: 250, y:0 },
+                               { x: 125, y:-25 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
@@ -107,9 +107,9 @@ export default {
 
                 gsap.to("#terra-container", {
                     motionPath: {
-                        path:[ { x: 100, y: 50},
-                               { x: 300, y:0 },
-                               { x: 100, y:-25 },
+                        path:[ { x: 200, y: 50},
+                               { x: 400, y:0 },
+                               { x: 200, y:-25 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
@@ -195,7 +195,7 @@ export default {
 #venus-element{
     position: absolute;
     top: 0px;
-    left: 30%;
+    left: 43%;
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -215,7 +215,7 @@ export default {
 #terra-container{
     position: absolute;
     top: 0px;
-    left: 40%;
+    left: 37%;
     width: 100px;
     height: 100px;
     border-radius: 50px;
