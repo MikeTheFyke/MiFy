@@ -103,7 +103,20 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5,
+                duration: 5.5,
+                repeat: -1, 
+                })
+
+                gsap.to("#neptune", {
+                    motionPath: {
+                        path:[ { x: 550, y: 50},
+                               { x: 1100, y:0 },
+                               { x: 550, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 6,
                 repeat: -1, 
                 })
 
