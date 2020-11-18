@@ -94,6 +94,19 @@ export default {
                 repeat: -1, 
                 })
 
+                gsap.to("#uranus", {
+                    motionPath: {
+                        path:[ { x: 525, y: 50},
+                               { x: 1050, y:0 },
+                               { x: 525, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5,
+                repeat: -1, 
+                })
+
                 gsap.to(".mars-beta", {
                     motionPath: {
                         path:[ { x: 40},
@@ -282,6 +295,16 @@ export default {
     height: 100px;
     border-radius: 50px;
     background-color: #e34d2b;
+}
+
+#uranus{
+    position: absolute;
+    top: 0px;
+    left: 14%;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #8dcbe3;
 }
 
 </style>
