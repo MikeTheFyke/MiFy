@@ -81,6 +81,19 @@ export default {
                 repeat: -1, 
                 })
 
+                gsap.to("#jupiter", {
+                    motionPath: {
+                        path:[ { x: 450, y: 50},
+                               { x: 900, y:0 },
+                               { x: 450, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5,
+                repeat: -1, 
+                })
+
                 gsap.to(".mars-beta", {
                     motionPath: {
                         path:[ { x: 40},
