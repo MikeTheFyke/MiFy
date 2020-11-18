@@ -116,7 +116,20 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 6,
+                duration: 6.25,
+                repeat: -1, 
+                })
+
+                gsap.to("#pluto", {
+                    motionPath: {
+                        path:[ { x: 575, y: 50},
+                               { x: 1150, y:0 },
+                               { x: 575, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5.5,
                 repeat: -1, 
                 })
 
