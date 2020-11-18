@@ -57,9 +57,9 @@ export default {
 
                 gsap.to("#mars-container", {
                     motionPath: {
-                        path:[ { x: 225, y: 50},
-                               { x: 450, y:0 },
-                               { x: 225, y:-25 },
+                        path:[ { x: 275, y: 50},
+                               { x: 550, y:0 },
+                               { x: 275, y:-25 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
@@ -154,7 +154,7 @@ export default {
 #mars-container{
     position: absolute;
     top: 0px;
-    left: 35%;
+    left: 32%;
 }
 
 #mars-element{
