@@ -205,7 +205,7 @@ export default {
 #alpha-element{
     position: absolute;
     top: 0px;
-    left: 45%;
+    left: 50%;
     width: 100px;
     height: 100px;
     border-radius: 50px;
