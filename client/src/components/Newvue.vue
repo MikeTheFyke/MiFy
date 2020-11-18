@@ -238,4 +238,18 @@ export default {
     background-color: #bcc0d6;
 }
 
+#saturn{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: #d16619;
+}
+
+#jupiter{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #e34d2b;
+}
+
 </style>
