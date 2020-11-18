@@ -64,7 +64,7 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5,
+                duration: 4,
                 repeat: -1, 
                 })
 
@@ -77,7 +77,7 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5,
+                duration: 4.5,
                 repeat: -1, 
                 })
 
@@ -114,7 +114,7 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5,
+                duration: 2,
                 repeat: -1, 
                 })
 
@@ -127,7 +127,7 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5,
+                duration: 3,
                 repeat: -1, 
                 })
 
@@ -140,7 +140,7 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5,
+                duration: 4,
                 repeat: -1, 
                 })
 
