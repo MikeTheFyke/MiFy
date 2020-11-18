@@ -81,9 +81,9 @@ export default {
 
                 gsap.to("#mercury-element", {
                     motionPath: {
-                        path:[ { x: 150, y: 50},
-                               { x: 300, y:0 },
-                               { x: 150, y:-25 },
+                        path:[ { x: 75, y: 50},
+                               { x: 150, y:0 },
+                               { x: 75, y:-25 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
@@ -185,7 +185,7 @@ export default {
 #mercury-element{
     position: absolute;
     top: 0px;
-    left: 35%;
+    left: 47%;
     width: 30px;
     height: 30px;
     border-radius: 15px;
