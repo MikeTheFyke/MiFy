@@ -333,4 +333,14 @@ export default {
     background-color: #8dcbe3;
 }
 
+#neptune{
+    position: absolute;
+    top: 0px;
+    left: 12%;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #86adbd;
+}
+
 </style>
