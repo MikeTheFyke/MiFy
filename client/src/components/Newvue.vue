@@ -68,6 +68,19 @@ export default {
                 repeat: -1, 
                 })
 
+                gsap.to("#saturn", {
+                    motionPath: {
+                        path:[ { x: 350, y: 50},
+                               { x: 700, y:0 },
+                               { x: 350, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5,
+                repeat: -1, 
+                })
+
                 gsap.to(".mars-beta", {
                     motionPath: {
                         path:[ { x: 40},
@@ -239,6 +252,9 @@ export default {
 }
 
 #saturn{
+    position: absolute;
+    top: 0px;
+    left: 26%;
     width: 70px;
     height: 70px;
     border-radius: 35px;
@@ -246,6 +262,9 @@ export default {
 }
 
 #jupiter{
+    position: absolute;
+    top: 0px;
+    left: 17%;
     width: 100px;
     height: 100px;
     border-radius: 50px;
