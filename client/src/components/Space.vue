@@ -29,14 +29,14 @@ export default {
 
 #space-container{
     position: absolute;
-    top: 400px;
+    top: 600px;
     width: 100%;
     height: 400px;
 }
 
 #space-container2{
     margin: 0px auto;
-    width: 20vw;
+    width: 0px;
     height: 100%;
 }
 
@@ -44,7 +44,7 @@ export default {
     height: 100px;
     width: 100px;
     border-radius: 50px;
-    background-color: yellow;
+    background-image: linear-gradient(red, yellow);
 }
 
 </style>
