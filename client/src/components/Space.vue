@@ -50,10 +50,22 @@ export default {
                 curviness: 1 }, 
                 duration: 3, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
 
+                gsap.to("#terra-container", {
+                    motionPath: {
+                        path:[ { x: 200, y: 200},
+                               { x: 400, y: 0 },
+                               { x: 200, y:-200 },
+                               { x: 0,   y:0 },
+                             ],
+                    curviness: 1 }, 
+                duration: 4, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
+
                 gsap.to("#terra-beta", {
                     motionPath: {
-                        path:[ { x: 40},
-                               { x: 0 },
+                        path:[  { x: 20},
+                                { x: 40},
+                                { x: 20},
+                                { x: 0 },
                              ],
                     curviness: 1 }, 
                 duration: 2, repeat: -1, ease: "Linear.easeInOut" })
