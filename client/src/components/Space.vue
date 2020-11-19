@@ -2,6 +2,7 @@
     <div id="space-container">
         <div id="space-container2">
             <div id="Alpha"></div>
+            <div id="mercury-element"></div>
         </div>
     </div>
 </template>
@@ -48,6 +49,16 @@ export default {
     width: 100px;
     border-radius: 50px;
     background-image: linear-gradient(red, yellow);
+}
+
+#mercury-element{
+    position: relative;
+    top: -65px;
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #bfbeac;
 }
 
 </style>
