@@ -49,6 +49,14 @@ export default {
                              ],
                 curviness: 1 }, 
                 duration: 3, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
+
+                gsap.to("#terra-beta", {
+                    motionPath: {
+                        path:[ { x: 40},
+                               { x: 0 },
+                             ],
+                    curviness: 1 }, 
+                duration: 2, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
@@ -94,6 +102,32 @@ export default {
     height: 40px;
     border-radius: 20px;
     background-image: linear-gradient(#c7bf2e, yellow);
+}
+
+#terra-container{
+    position: absolute;
+    top: 0px;
+    left: 37%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+#terra{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #4f64e0;
+}
+
+#terra-beta{
+    position: relative;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(#bfbeac, #65696b);
 }
 
 </style>
