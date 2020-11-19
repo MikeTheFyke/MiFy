@@ -2,7 +2,7 @@
     <div id="space-container">
         <div id="space-container2">
             <div id="Alpha"></div>
-            <div id="mercury-element"></div>
+            <div id="mercury"></div>
         </div>
     </div>
 </template>
@@ -24,6 +24,16 @@ export default {
         },
         mounted (){
             gsap.to('#Alpha', 5, {rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
+
+            gsap.to("#mercury", {
+                    motionPath: {
+                        path:[ { x: 85,  y: 85},
+                               { x: 170, y:0 },
+                               { x: 85,  y: -85 },
+                               { x: 0,   y:0 },
+                             ],
+                    curviness: 1 }, 
+                duration: 4, repeat: -1, ease: "Linear.easeInOut"  })
         }
     
 }
@@ -51,7 +61,7 @@ export default {
     background-image: linear-gradient(red, yellow);
 }
 
-#mercury-element{
+#mercury{
     position: relative;
     top: -65px;
     left: -50px;
