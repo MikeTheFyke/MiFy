@@ -1,14 +1,15 @@
 <template>
     <div id="space-container">
-        <div id="Alpha"></div>
-
+        <div id="space-container2">
+            <div id="Alpha"></div>
+        </div>
     </div>
 </template>
 
 <script>
 
 export default {
-        name: "Space",
+        name: 'Spacevue',
         data (){
             return{
 
@@ -28,9 +29,15 @@ export default {
 
 #space-container{
     position: absolute;
-    top: 200px;
+    top: 400px;
     width: 100%;
     height: 400px;
+}
+
+#space-container2{
+    margin: 0px auto;
+    width: 20vw;
+    height: 100%;
 }
 
 #Alpha{
