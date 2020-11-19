@@ -3,6 +3,7 @@
         <div id="space-container2">
             <div id="Alpha"></div>
             <div id="mercury"></div>
+            <div id="venus"></div>
         </div>
     </div>
 </template>
@@ -34,6 +35,19 @@ export default {
                              ],
                     curviness: 1 }, 
                 duration: 4, rotation: 360, repeat: -1, ease: "Linear.easeInOut"  })
+
+                gsap.to("#venus", {
+                    motionPath: {
+                        path:[ { x: 125, y: 50},
+                               { x: 250, y:0 },
+                               { x: 125, y:-25 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 3,
+                repeat: -1, 
+                })
         }
     
 }
@@ -69,6 +83,16 @@ export default {
     height: 30px;
     border-radius: 15px;
     background-image: linear-gradient(#bfbeac, #65696b);
+}
+
+#venus{
+    position: relative;
+    top: -95px;
+    left: -100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #c7bf2e;
 }
 
 </style>
