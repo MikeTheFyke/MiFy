@@ -205,7 +205,7 @@ export default {
 
 #green-container{
     position: absolute;
-    top: 200px;
+    top: 100px;
     width: 100%;
     height: 200px;
 }

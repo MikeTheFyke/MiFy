@@ -7,7 +7,10 @@
 </template>
 
 <script>
+import gsap from "gsap";
+import motionPath from "gsap/MotionPathPlugin";
 
+gsap.registerPlugin(motionPath)
 export default {
         name: 'Spacevue',
         data (){
@@ -19,7 +22,7 @@ export default {
 
         },
         mounted (){
-
+            gsap.to('#Alpha', 5, {rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
@@ -29,7 +32,7 @@ export default {
 
 #space-container{
     position: absolute;
-    top: 600px;
+    top: 500px;
     width: 100%;
     height: 400px;
 }
