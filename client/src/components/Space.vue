@@ -60,15 +60,15 @@ export default {
                     curviness: 1 }, 
                 duration: 4, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
 
-                gsap.to("#terra-beta", {
-                    motionPath: {
-                        path:[  { x: 20},
-                                { x: 40},
-                                { x: 20},
-                                { x: 0 },
-                             ],
-                    curviness: 1 }, 
-                duration: 2, repeat: -1, ease: "Linear.easeInOut" })
+                // gsap.to("#terra-beta", {
+                //     motionPath: {
+                //         path:[  { x: 20},
+                //                 { x: 40},
+                //                 { x: 20},
+                //                 { x: 0 },
+                //              ],
+                //     curviness: 1 }, 
+                // duration: 2, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
