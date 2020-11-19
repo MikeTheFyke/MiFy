@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <Newvue />
+    <Spacevue />
     <!-- <HelloWorld /> -->
     <Provue />
     <Threevue />
@@ -15,6 +16,7 @@ import Newvue from './components/Newvue.vue';
 import Provue from './components/Provue.vue';
 import Threevue from './components/Threevue.vue';
 import Greenvue from './components/Green.vue';
+import Spacevue from './components/Space.vue';
 
 // import HelloWorld from './components/HelloWorld.vue';
 
@@ -23,6 +25,7 @@ export default {
   components: {
     Header,
     Newvue,
+    Spacevue,
     // HelloWorld,
     Provue,
     Threevue,
