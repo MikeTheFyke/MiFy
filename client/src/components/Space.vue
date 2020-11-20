@@ -84,6 +84,15 @@ export default {
                              ],
                     curviness: 1 }, 
                 duration: 4.5, repeat: -1, ease: "Linear.easeInOut" })
+
+                gsap.to(".mars-beta", {
+                    motionPath: {
+                        path:[ { x: 40},
+                               { x: 0 },
+                             ],
+                    curviness: 1
+                }, 
+                duration: 2, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
