@@ -8,6 +8,11 @@
                 <div id="terra-beta"></div>
                 <div id="terra"></div>
             </div>
+            <div id="mars-container">
+                    <div id="mars-phobos" class="mars-beta"></div>
+                    <div id="mars-deimos" class="mars-beta"></div>
+                    <div id="mars-element"></div>
+            </div>
         </div>
     </div>
 </template>
