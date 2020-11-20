@@ -209,4 +209,17 @@ export default {
     background-color: #ababa4;
 }
 
+#saturn-container{
+    position: absolute;
+    top: 0px;
+    left: 26%;
+}
+
+#saturn{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: #d16619;
+}
+
 </style>
