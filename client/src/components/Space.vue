@@ -185,7 +185,7 @@ export default {
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    background-color: #f20000;
+    background-image: linear-gradient(#f20000, #612722);
 }
 
 #mars-phobos{
