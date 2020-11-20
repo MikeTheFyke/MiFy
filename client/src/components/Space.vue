@@ -85,7 +85,7 @@ export default {
                     curviness: 1 }, 
                 duration: 4.5, repeat: -1, ease: "Linear.easeInOut" })
 
-                gsap.to(".mars-beta", {
+                gsap.to("#mars-deimos", {
                     motionPath: {
                         path:[ { x: 40},
                                { x: 0 },
@@ -93,6 +93,15 @@ export default {
                     curviness: 1
                 }, 
                 duration: 2, repeat: -1, ease: "Linear.easeInOut" })
+
+                gsap.to("#mars-phobos", {
+                    motionPath: {
+                        path:[ { x: 40},
+                               { x: 0 },
+                             ],
+                    curviness: 1
+                }, 
+                duration: 1.5, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
@@ -182,9 +191,9 @@ export default {
 #mars-phobos{
     position: relative;
     top: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
     background-color: #6b6b63;
 }
 
