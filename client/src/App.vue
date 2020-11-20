@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Newvue />
+    <!-- <Newvue /> -->
     <Spacevue />
     <!-- <HelloWorld /> -->
     <Provue />
@@ -12,7 +12,7 @@
 
 <script>
 import Header from './components/layout/Header.vue';
-import Newvue from './components/Newvue.vue';
+// import Newvue from './components/Newvue.vue';
 import Provue from './components/Provue.vue';
 import Threevue from './components/Threevue.vue';
 import Greenvue from './components/Green.vue';
@@ -24,7 +24,7 @@ export default {
   name: 'App',
   components: {
     Header,
-    Newvue,
+    // Newvue,
     Spacevue,
     // HelloWorld,
     Provue,

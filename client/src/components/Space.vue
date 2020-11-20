@@ -14,6 +14,8 @@
                     <div id="mars-element"></div>
             </div>
             <div id="saturn-container">
+                <div id="saturn-ring-outer"></div>
+                <div id="saturn-ring-inner"></div>
                 <div id="saturn"></div>
             </div>
         </div>
@@ -106,7 +108,7 @@ export default {
                 }, 
                 duration: 1.5, repeat: -1, ease: "Linear.easeInOut" })
 
-                gsap.to("#saturn", {
+                gsap.to("#saturn-container", {
                     motionPath: {
                         path:[ { x: 400, y: 400},
                                { x: 800, y:0 },
@@ -228,10 +230,32 @@ export default {
 }
 
 #saturn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
     width: 70px;
     height: 70px;
     border-radius: 35px;
     background-color: #d16619;
+}
+
+#saturn-ring-outer{
+    position: absolute;
+    top: 0px;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    background-color: #ababa4;
+}
+
+#saturn-ring-inner{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #ffffff;
 }
 
 </style>
