@@ -75,17 +75,15 @@ export default {
                 //     curviness: 1 }, 
                 // duration: 2, repeat: -1, ease: "Linear.easeInOut" })
 
-                gsap.to("#mars-container", {
-                    motionPath: {
-                        path:[ { x: 275, y: 50},
-                               { x: 550, y:0 },
-                               { x: 275, y:-25 },
-                               { x: 0, y:0 },
-                             ],
-                curviness: 1
-                }, 
-                duration: 4,
-                repeat: -1, ease: "Linear.easeInOut" })
+                // gsap.to("#mars-container", {
+                //     motionPath: {
+                //         path:[ { x: 275, y: 50},
+                //                { x: 550, y:0 },
+                //                { x: 275, y:-25 },
+                //                { x: 0, y:0 },
+                //              ],
+                //     curviness: 1 }, 
+                // duration: 4, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
@@ -157,6 +155,12 @@ export default {
     height: 10px;
     border-radius: 5px;
     background-image: linear-gradient(#bfbeac, #65696b);
+}
+
+#mars-container{
+    position: absolute;
+    top: 0px;
+    left: 32%;
 }
 
 #mars-element{
