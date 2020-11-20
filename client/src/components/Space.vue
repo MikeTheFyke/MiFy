@@ -13,6 +13,7 @@
                     <div id="mars-deimos" class="mars-beta"></div>
                     <div id="mars-element"></div>
             </div>
+            <div id="saturn"></div>
         </div>
     </div>
 </template>
@@ -83,7 +84,7 @@ export default {
                                { x: 0, y:0 },
                              ],
                     curviness: 1 }, 
-                duration: 4.5, repeat: -1, ease: "Linear.easeInOut" })
+                duration: 4.5, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
 
                 gsap.to("#mars-deimos", {
                     motionPath: {
