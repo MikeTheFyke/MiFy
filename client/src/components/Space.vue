@@ -236,7 +236,7 @@ export default {
     width: 70px;
     height: 70px;
     border-radius: 35px;
-    background-color: #d16619;
+    background-image: linear-gradient(#d16619, #65696b);
 }
 
 #saturn-ring-outer{
@@ -245,7 +245,7 @@ export default {
     width: 90px;
     height: 90px;
     border-radius: 45px;
-    background-color: #ababa4;
+    background-image: linear-gradient(#bfbeac, #65696b);
 }
 
 #saturn-ring-inner{
