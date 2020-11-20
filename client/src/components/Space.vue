@@ -147,4 +147,29 @@ export default {
     background-image: linear-gradient(#bfbeac, #65696b);
 }
 
+#mars-element{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f20000;
+}
+
+#mars-phobos{
+    position: relative;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #6b6b63;
+}
+
+#mars-deimos{
+    position: relative;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ababa4;
+}
+
 </style>
