@@ -105,6 +105,18 @@ export default {
                     curviness: 1
                 }, 
                 duration: 1.5, repeat: -1, ease: "Linear.easeInOut" })
+
+                gsap.to("#saturn", {
+                    motionPath: {
+                        path:[ { x: 400, y: 400},
+                               { x: 800, y:0 },
+                               { x: 400, y:-400 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 5.5,
+                repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
