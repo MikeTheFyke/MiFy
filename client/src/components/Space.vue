@@ -13,7 +13,9 @@
                     <div id="mars-deimos" class="mars-beta"></div>
                     <div id="mars-element"></div>
             </div>
-            <div id="saturn"></div>
+            <div id="saturn-container">
+                <div id="saturn"></div>
+            </div>
         </div>
     </div>
 </template>
