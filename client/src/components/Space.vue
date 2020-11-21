@@ -128,7 +128,7 @@ export default {
 
 #space-container{
     position: absolute;
-    top: 500px;
+    top: 300px;
     width: 100%;
     height: 400px;
 }
