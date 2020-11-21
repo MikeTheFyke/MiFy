@@ -279,4 +279,14 @@ export default {
     border-radius: 50px;
     background-image: linear-gradient(#c99793,#c99793, #e34d2b,#c99793, #65696b, #c99793, #65696b, #e34d2b, #65696b);
 }
+
+#uranus{
+    position: absolute;
+    top: 0px;
+    left: 14%;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #8dcbe3;
+}
 </style>
