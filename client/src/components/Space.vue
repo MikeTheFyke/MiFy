@@ -145,27 +145,27 @@ export default {
                 }, 
                 duration: 7, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
 
-                gsap.to("#uranus", {
+                gsap.to("#neptune", {
                     motionPath: {
-                        path:[ { x: 600, y: 600},
-                               { x: 1250, y:0 },
-                               { x: 600, y:-600 },
+                        path:[ { x: 650, y: 650},
+                               { x: 1300, y:0 },
+                               { x: 650, y:-650 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
                 }, 
-                duration: 7, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
+                duration: 7.5, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
 
-                gsap.to("#uranus", {
+                gsap.to("#pluto", {
                     motionPath: {
-                        path:[ { x: 600, y: 600},
-                               { x: 1250, y:0 },
-                               { x: 600, y:-600 },
+                        path:[ { x: 675, y: 675},
+                               { x: 1325, y:0 },
+                               { x: 675, y:-675 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
                 }, 
-                duration: 7, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
+                duration: 8, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
