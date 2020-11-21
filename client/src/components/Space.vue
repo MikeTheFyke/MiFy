@@ -303,4 +303,24 @@ export default {
     border-radius: 10px;
     background-color: #8dcbe3;
 }
+
+#neptune{
+    position: absolute;
+    top: 0px;
+    left: 12%;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #86adbd;
+}
+
+#pluto{
+    position: absolute;
+    top: 0px;
+    left: 10%;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #546d78;
+}
 </style>
