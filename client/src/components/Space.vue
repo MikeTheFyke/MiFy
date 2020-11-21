@@ -134,7 +134,8 @@ export default {
 }
 
 #space-container2{
-    margin: 0px auto;
+    margin: 0px;
+    margin-left: 55vw;
     width: 0px;
     height: 100%;
 }
