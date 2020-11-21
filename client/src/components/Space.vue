@@ -20,6 +20,8 @@
             </div>
             <div id="jupiter"></div>
             <div id="uranus"></div>
+            <div id="neptune"></div>
+            <div id="pluto"></div>
         </div>
     </div>
 </template>
