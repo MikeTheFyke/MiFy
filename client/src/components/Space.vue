@@ -123,9 +123,9 @@ export default {
 
                 gsap.to("#jupiter", {
                     motionPath: {
-                        path:[ { x: 400, y: 400},
-                               { x: 800, y:0 },
-                               { x: 400, y:-400 },
+                        path:[ { x: 500, y: 500},
+                               { x: 1050, y:0 },
+                               { x: 500, y:-500 },
                                { x: 0, y:0 },
                              ],
                 curviness: 1
