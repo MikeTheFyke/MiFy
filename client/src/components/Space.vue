@@ -267,6 +267,6 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    background-color: #e34d2b;
+    background-image: linear-gradient(#c99793, #e34d2b);
 }
 </style>
