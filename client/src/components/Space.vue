@@ -52,7 +52,7 @@ export default {
                                { x: 0,   y:0 },
                              ],
                     curviness: 1 }, 
-                duration: 4, rotation: 360, repeat: -1, ease: "Linear.easeInOut"  })
+                duration: 2.5, rotation: 360, repeat: -1, ease: "Linear.easeInOut"  })
 
                 gsap.to("#venus", {
                     motionPath: {
