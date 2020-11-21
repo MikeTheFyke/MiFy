@@ -19,6 +19,7 @@
                 <div id="saturn"></div>
             </div>
             <div id="jupiter"></div>
+            <div id="uranus"></div>
         </div>
     </div>
 </template>
