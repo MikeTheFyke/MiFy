@@ -131,6 +131,17 @@ export default {
                 curviness: 1
                 }, 
                 duration: 6.5, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
+
+                gsap.to("#uranus", {
+                    motionPath: {
+                        path:[ { x: 550, y: 550},
+                               { x: 1150, y:0 },
+                               { x: 550, y:-550 },
+                               { x: 0, y:0 },
+                             ],
+                curviness: 1
+                }, 
+                duration: 6.5, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
