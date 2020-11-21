@@ -18,6 +18,7 @@
                 <div id="saturn-ring-inner"></div>
                 <div id="saturn"></div>
             </div>
+            <div id="jupiter"></div>
         </div>
     </div>
 </template>
