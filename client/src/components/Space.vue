@@ -118,8 +118,7 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5.5,
-                repeat: -1, ease: "Linear.easeInOut" })
+                duration: 5.5, repeat: -1, ease: "Linear.easeInOut" })
 
                 gsap.to("#jupiter", {
                     motionPath: {
@@ -130,8 +129,7 @@ export default {
                              ],
                 curviness: 1
                 }, 
-                duration: 5.5,
-                repeat: -1, ease: "Linear.easeInOut" })
+                duration: 6.5, rotation: 360, repeat: -1, ease: "Linear.easeInOut" })
         }
     
 }
