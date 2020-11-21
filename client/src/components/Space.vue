@@ -260,4 +260,13 @@ export default {
     background-color: #ffffff;
 }
 
+#jupiter{
+    position: absolute;
+    top: 0px;
+    left: 17%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #e34d2b;
+}
 </style>
